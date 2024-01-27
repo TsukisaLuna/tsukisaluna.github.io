@@ -12,14 +12,14 @@ function acyncMovePage(url){
                 url : url,
                 async : true,
                 type : "POST",
-                dataType : "html",
+                dataType : "text",
                 cache : false
         };
         
         $.ajax(ajaxOption).done(function(data){
             // Contents 영역 삭제
-            $('#main').children().remove();
+            $("#main").children().remove();
             // Contents 영역 교체
-            $('#main').html(data);
+            $("#main").text(data);
         });
     }
