@@ -1,29 +1,36 @@
-<div class="chara-layout-container">
-    <div class="chara-versions">
-        <ul class="list-unstyled">
-            <li class="active">기본</li>
-            <li>격투가 (킥복싱)</li>
-            <li>겨울</li>
-        </ul>
-    </div>
+<div class="chara-container">
+    <div class="row min-vh-75">
+        <div class="col-md-2 chara-sidebar">
+            <ul class="list-group list-group-flush" id="versionList">
+                <li class="list-group-item active" data-target="base">기본</li>
+                <li class="list-group-item" data-target="boxing">격투가(킥복싱)</li>
+                <li class="list-group-item" data-target="winter">겨울</li>
+            </ul>
+        </div>
 
-    <div class="chara-sheet-area">
-        <div class="sheet-placeholder">
-            <p>캐릭터설정 시트</p>
+        <div class="col-md-7 text-center border-start border-end">
+            <div class="chara-display-box fade-transition" id="charaDisplayArea">
+                <div class="sheet-placeholder">
+                     <p>Tsukisa 기본 설정화</p>
+                    </div>
             </div>
-    </div>
+        </div>
 
-    <div class="chara-info-area">
-        <h3>캐릭터설명</h3>
-        <hr>
-        <div class="info-content">
-            <p>여기에 캐릭터의 성격, 특징, 배경 설정 등을 적어주세요.</p>
+        <div class="col-md-3">
+            <h4 id="charaNameTitle">Tsukisa (月作)</h4>
+            <div class="chara-desc fade-transition" id="charaDescArea">
+                <div id="charaDescText">
+                    <p>Tsukisa의 기본 모습입니다. 달에서 온 조용한 소년...</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="chara-footer-tabs">
-        <div class="tab-item active">Tsukisa군</div>
-        <div class="tab-item">Stella군</div>
-        <div class="tab-item">???</div>
+    <div class="row mt-4 border-top pt-3">
+        <div class="col-12 d-flex justify-content-center gap-4">
+            <a href="#" class="chara-selector active" data-chara="tsukisa">Tsukisa군</a>
+            <a href="#" class="chara-selector" data-chara="stella">Stella군</a>
+            <a href="#" class="chara-selector" data-chara="unknown">???</a>
+        </div>
     </div>
 </div>
