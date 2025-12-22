@@ -84,6 +84,75 @@
   color: #007bff;
 }
 
+/* 모바일 대응 레이아웃 (768px 이하) */
+@media (max-width: 768px) {
+  /* 1. 세로 배치로 변경 */
+  .chara-container .row {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+  }
+
+  /* 2. 사이드바(버전 선택)를 가로 스크롤 형태로 변경 (선택사항) */
+  .chara-sidebar {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+  .chara-sidebar ul {
+      flex-direction: row !important;
+      overflow-x: auto;
+      white-space: nowrap;
+      border-bottom: 1px solid #eee;
+  }
+  .chara-sidebar .list-group-item {
+      border-left: none !important;
+      border-bottom: 3px solid transparent;
+  }
+  .chara-sidebar .list-group-item.active {
+      border-bottom-color: #00bfff;
+  }
+
+  /* 3. 중앙 이미지 영역을 배경으로 사용 */
+  .chara-display-box {
+      width: 100%;
+      min-height: 400px;
+      position: relative;
+      z-index: 1;
+  }
+  
+  /* 캐릭터 시트 이미지에 블러 효과 적용 */
+  .chara-display-box img, .sheet-placeholder {
+      filter: blur(4px) brightness(0.8);
+      transition: 0.3s;
+  }
+
+  /* 4. 오른쪽 설명창을 이미지 위로 겹침 (Overlay) */
+  .col-md-3 {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      z-index: 2;
+      
+      /* 반투명 유리창 효과 (Glassmorphism) */
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px); 
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      
+      /* 설명이 길어질 경우 대비 */
+      max-height: 200px;
+      overflow-y: auto;
+  }
+
+  #charaNameTitle {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+  }
+}
+
 /* 반응형 대응: 화면이 작아지면 세로로 배치 */
 @media (max-width: 900px) {
   .chara-layout-container {
