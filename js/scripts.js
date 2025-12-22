@@ -11,7 +11,7 @@ function acyncMovePage(url){
         var ajaxOption = {
                 url : url,
                 async : true,
-                type : "POST",
+                type : "GET",
                 dataType : "text",
                 cache : false
         };
