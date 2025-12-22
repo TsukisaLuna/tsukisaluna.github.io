@@ -20,6 +20,6 @@ function acyncMovePage(url){
             // Contents 영역 삭제
             $("#main").children().remove();
             // Contents 영역 교체
-            $("#main").text(data);
+            $("#main").html(data);
         });
     }
