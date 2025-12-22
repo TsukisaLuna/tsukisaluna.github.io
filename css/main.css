@@ -3,3 +3,165 @@
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-maincolor-rgb), var(--bs-bg-opacity)) !important;
   }
+
+
+  
+/* =========================================
+   chara.html 애니메이션 및 인터랙션 스타일
+========================================= */
+
+/* 1. 페이지 로드 시 전체 페이드인 효과 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chara-container {
+  animation: fadeIn 0.5s ease-out forwards;
+  /* 기존 스타일 유지 */
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+/* 2. 왼쪽 의상 리스트 아이템 애니메이션 */
+.chara-sidebar .list-group-item {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  color: #888;
+  padding: 12px 15px;
+  transition: all 0.2s ease; /* 부드러운 변화를 위한 핵심 */
+  border-left: 3px solid transparent;
+  position: relative;
+  left: 0;
+}
+
+/* 마우스를 올렸을 때 */
+.chara-sidebar .list-group-item:hover {
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.03);
+  left: 3px; /* 살짝 오른쪽으로 이동 */
+}
+
+/* 클릭되어 활성화되었을 때 */
+.chara-sidebar .list-group-item.active {
+  color: #000;
+  background-color: transparent; /* Bootstrap 기본 배경색 제거 */
+  border-left-color: #00bfff; /* 포인트 컬러 */
+  left: 0; /* 위치 복귀 */
+  pointer-events: none; /* 활성화된 상태에서는 다시 클릭 방지 */
+}
+
+/* 3. 이미지 및 텍스트 전환 시 사용할 페이드 효과 클래스 */
+.fade-transition {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+.fade-transition.fading-out {
+  opacity: 0;
+}
+
+/* 하단 캐릭터 선택 탭 */
+.chara-selector-tabs {
+  grid-column: 1 / span 3; /* 가로 전체 차지 */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+.chara-selector {
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 5px 15px;
+  transition: 0.3s;
+}
+.chara-selector.active {
+  color: #007bff;
+  font-weight: bold;
+}
+.chara-selector:hover {
+  color: #007bff;
+}
+
+/* 모바일 대응 레이아웃 (768px 이하) */
+@media (max-width: 768px) {
+  /* 1. 세로 배치로 변경 */
+  .chara-container .row {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+  }
+
+  /* 2. 사이드바(버전 선택)를 가로 스크롤 형태로 변경 (선택사항) */
+  .chara-sidebar {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+  .chara-sidebar ul {
+      flex-direction: row !important;
+      overflow-x: auto;
+      white-space: nowrap;
+      border-bottom: 1px solid #eee;
+  }
+  .chara-sidebar .list-group-item {
+      border-left: none !important;
+      border-bottom: 3px solid transparent;
+  }
+  .chara-sidebar .list-group-item.active {
+      border-bottom-color: #00bfff;
+  }
+
+  /* 3. 중앙 이미지 영역을 배경으로 사용 */
+  .chara-display-box {
+      width: 100%;
+      min-height: 400px;
+      position: relative;
+      z-index: 1;
+  }
+  
+  /* 캐릭터 시트 이미지에 블러 효과 적용 */
+  .chara-display-box img, .sheet-placeholder {
+      filter: blur(4px) brightness(0.8);
+      transition: 0.3s;
+  }
+
+  /* 4. 오른쪽 설명창을 이미지 위로 겹침 (Overlay) */
+  .col-md-3 {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      z-index: 2;
+      
+      /* 반투명 유리창 효과 (Glassmorphism) */
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px); 
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      
+      /* 설명이 길어질 경우 대비 */
+      max-height: 200px;
+      overflow-y: auto;
+  }
+
+  #charaNameTitle {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+  }
+}
+
+/* 반응형 대응: 화면이 작아지면 세로로 배치 */
+@media (max-width: 900px) {
+  .chara-layout-container {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+  }
+  .chara-versions ul {
+      display: flex;
+      gap: 10px;
+  }
+}
