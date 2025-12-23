@@ -35,37 +35,38 @@ function acyncMovePage(url){
 // 1. 캐릭터 데이터 정의 (나중에 내용을 채워주세요)
 const charaData = {
     'tsukisa': {
-        'name': 'Tsukisa (月作)',
+        'name': 'Tsukisa Luna',
         'color': '#00bfff', // 테마 컬러
         'versions': {
             'base': {
                 'title': '기본',
-                'img': 'assets/sheets/Summer_Default.jpg', // 실제 이미지 경로로 변경 필요
+                'img': 'assets/sheets/tsu_default.jpg', // 실제 이미지 경로로 변경 필요
                 'imgPlaceholder': 'Tsukisa 기본 설정화', // 임시 텍스트
-                'desc': '<p>Tsukisa의 기본 모습입니다. 달에서 온 조용한 소년...</p>'
+                'desc': '<p>밝고 명량한 쾌활한 늑대소년</p>'
             },
             'boxing': {
                 'title': '격투가(킥복싱)',
-                'img': 'assets/sheets/Boxing_Sheet1.jpg', // 실제 이미지 경로로 변경 필요
+                'img': 'assets/sheets/tsu_boxing1.jpg', // 실제 이미지 경로로 변경 필요
                 'imgPlaceholder': 'Tsukisa 킥복싱 Ver.',
-                'desc': '<p>빠른 스피드를 자랑하는 킥복싱 스타일입니다. 링 위에서는 눈빛이 변합니다.</p>'
+                'desc': '<p></p>'
             },
             'winter': {
                 'title': '겨울',
-                'img': 'assets/sheets/Winter_Default.jpg', // 실제 이미지 경로로 변경 필요
+                'img': 'assets/sheets/tsu_winter.jpg', // 실제 이미지 경로로 변경 필요
                 'imgPlaceholder': 'Tsukisa 겨울 코트 Ver.',
-                'desc': '<p>따뜻한 코트를 입은 겨울 모습입니다. 추위를 많이 타는 편입니다.</p>'
+                'desc': '<p></p>'
             }
         }
     },
     'stella': { // Stella 데이터 예시
-        'name': 'Stella (별)',
+        'name': 'Stella Maris',
         'color': '#ff69b4',
         'versions': {
             'base': {
                 'title': '기본',
+                'img': 'assets/sheets/ste_default.jpg', // 실제 이미지 경로로 변경 필요
                 'imgPlaceholder': 'Stella 기본 설정화',
-                'desc': '<p>Stella의 기본 모습입니다. 밝고 명랑한 성격의 소유자.</p>'
+                'desc': '<p>사고뭉치 순수악의 롭이어소년</p>'
             }
             // 필요한 만큼 추가...
         }
@@ -105,11 +106,11 @@ $(document).ready(function() {
         // 0.3초 후(transition 시간과 동일) 내용 교체 및 페이드 인
         setTimeout(function() {
             // 이미지 영역 업데이트 (실제 이미지가 생기면 주석을 푸세요)
-            $('#charaImage').attr('src', data.img);
+            $('#charaDisplayArea').attr('src', data.img);
             $('.sheet-placeholder p').text(data.imgPlaceholder); // 임시 텍스트 교체
 
             // 설명 영역 업데이트
-            $('#charaDescText').html(data.desc);
+            $('#charaDescArea').html(data.desc);
 
             // 페이드 인 시작
             $displayArea.removeClass('fading-out');
