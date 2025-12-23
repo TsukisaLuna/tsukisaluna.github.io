@@ -77,7 +77,7 @@ const charaData = {
 };
 
 // 현재 선택된 캐릭터 (기본값: tsukisa)
-let activeCharacter = 'tsukisa';
+let activeCharacter = '';
 
 
 // 2. 이벤트 리스너 설정 (문서가 로드된 후 실행)
