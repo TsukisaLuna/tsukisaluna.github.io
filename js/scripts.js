@@ -46,11 +46,11 @@ const charaData = {
                 'desc': '<p>밝고 명량하고 활발한 늑대소년</p>'
             },
             'boxing': {
-                'title': '격투가(킥복싱)',
+                'title': '킥복싱',
                 'thumb': 'assets/thumb/tsu_boxing.jpg',
                 'img': 'assets/sheets/tsu_boxing1.jpg', // 실제 이미지 경로로 변경 필요
                 'imgPlaceholder': 'Tsukisa 킥복싱 Ver.',
-                'desc': '<p>폭력과 어울리지 않아 보이는 아이지만 격투기에도 도전!<br>경기 때마다 귀여운 얼굴이 매번 망가지지만 강한 의지로 매번 승리를 쟁취하고 있다.</p>'
+                'desc': '<p>폭력과 어울리지 않아 보이는 아이지만 격투기에도 도전!<br>작은 충격에도 상처가 나서, 경기 때마다 귀여운 얼굴이 매번 망가지지만, 강한 의지로 매번 승리를 쟁취하고 있다.</p>'
             },
             'winter': {
                 'title': '겨울',
@@ -70,7 +70,7 @@ const charaData = {
                 'thumb': 'assets/thumb/ste_default.jpg', // 실제 이미지 경로로 변경 필요
                 'img': 'assets/sheets/ste_default.jpg', // 실제 이미지 경로로 변경 필요
                 'imgPlaceholder': 'Stella 기본 설정화',
-                'desc': '<p>사고뭉치 순수악의 롭이어소년<br></p>'
+                'desc': '<p>저돌적인 사고뭉치 순수악의 롭이어소년<br>남을 괴롭히는 것을 좋아하지만, 정말 싫어해서 괴롭히는 건 아니다.<br>츠키사군과 격렬한 시합 끝에 무승부를 얻은 이후, 라이벌 의식을 불태우고 있다.</p>'
             }
         }
     }
@@ -150,7 +150,7 @@ $(document).ready(function() {
         $('#versionList .list-group-item').first().trigger('click');
         $('#charaNameTitle').text(newCharaData.name); // 오른쪽 상단 이름 변경
 
-        const targetVersion = $('#versionList .list-group-item').first();
+        const targetVersion = $('#versionList .list-group-item').first().data('target');
         const data = charaData[activeCharacter].versions[targetVersion];
 
         const $displayArea = $('#charaDisplayArea');
