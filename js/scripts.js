@@ -38,7 +38,7 @@ const charaData = {
         'name': 'Tsukisa Luna',
         'color': '#00bfff', // 테마 컬러
         'versions': {
-            'base': {
+            'default': {
                 'title': '기본',
                 'thumb': 'assets/thumb/tsu_default.jpg',
                 'img': 'assets/sheets/tsu_default.jpg', // 실제 이미지 경로로 변경 필요
@@ -84,22 +84,15 @@ let activeCharacter = 'tsukisa';
 // 2. 이벤트 리스너 설정 (문서가 로드된 후 실행)
 $(document).ready(function() {
 
-    // [중요] 동적으로 불러온 요소에 대한 이벤트는 부모에게 위임해야 합니다.
-    
-    // A. 왼쪽 의상 리스트 클릭 이벤트
     $(document).on('click', '#versionList .list-group-item', function() {
-        // 이미 활성화된 탭이면 아무것도 안 함
-        if($(this).hasClass('active')) return;
 
-        // 1) 버튼 스타일 활성화 상태 변경
+        if($(this).hasClass('active')) return;
         $('#versionList .list-group-item').removeClass('active');
         $(this).addClass('active');
 
-        // 2) 선택한 데이터 가져오기
         const targetVersion = $(this).data('target');
         const data = charaData[activeCharacter].versions[targetVersion];
 
-        // 3) 이미지와 텍스트를 부드럽게 페이드아웃 -> 내용 변경 -> 페이드인
         const $displayArea = $('#charaDisplayArea');
         const $descArea = $('#charaDescArea');
 

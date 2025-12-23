@@ -1,10 +1,16 @@
+@font-face {
+  font-family: 'OneStoreMobilePop';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
+
 .bg-main {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-maincolor-rgb), var(--bs-bg-opacity)) !important;
   }
 
 
-  
 /* =========================================
    chara.html 애니메이션 및 인터랙션 스타일
 ========================================= */
@@ -75,6 +81,7 @@
   padding: 5px 15px;
   transition: 0.3s;
 }
+
 .chara-selector.active {
   color: #007bff;
   font-weight: bold;
@@ -82,6 +89,12 @@
 .chara-selector:hover {
   color: #007bff;
 }
+
+.chara-selector a {
+  text-decoration:none;
+}
+
+
 
 /* 모바일 대응 레이아웃 (768px 이하) */
 @media (max-width: 768px) {
