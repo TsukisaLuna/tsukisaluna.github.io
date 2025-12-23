@@ -106,7 +106,7 @@ $(document).ready(function() {
         // 0.3초 후(transition 시간과 동일) 내용 교체 및 페이드 인
         setTimeout(function() {
             // 이미지 영역 업데이트 (실제 이미지가 생기면 주석을 푸세요)
-            $('#charaDisplayArea').attr('src', data.img);
+            $('#charaSheet').attr('src', data.img);
             $('.sheet-placeholder p').text(data.imgPlaceholder); // 임시 텍스트 교체
 
             // 설명 영역 업데이트
