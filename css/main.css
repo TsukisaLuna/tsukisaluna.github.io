@@ -91,6 +91,7 @@
   width: 400px; /* 배너 너비 */
   transition: all 0.3s ease;
   text-align: center;
+  
   list-style-type: none;
 }
 
