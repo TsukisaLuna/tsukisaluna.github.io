@@ -43,14 +43,14 @@ const charaData = {
                 'thumb': 'assets/thumb/tsu_default.jpg',
                 'img': 'assets/sheets/tsu_default.jpg', // 실제 이미지 경로로 변경 필요
                 'imgPlaceholder': 'Tsukisa 기본 설정화', // 임시 텍스트
-                'desc': '<p>밝고 명량한 늑대소년</p>'
+                'desc': '<p>밝고 명량하고 활발한 늑대소년</p>'
             },
             'boxing': {
                 'title': '격투가(킥복싱)',
                 'thumb': 'assets/thumb/tsu_boxing.jpg',
                 'img': 'assets/sheets/tsu_boxing1.jpg', // 실제 이미지 경로로 변경 필요
                 'imgPlaceholder': 'Tsukisa 킥복싱 Ver.',
-                'desc': '<p>폭력과 어울리지 않아 보이는 아이지만 격투기에도 도전!<br>경기 때마다 귀여운 얼굴은 매번 망가지지만</p>'
+                'desc': '<p>폭력과 어울리지 않아 보이는 아이지만 격투기에도 도전!<br>경기 때마다 귀여운 얼굴이 매번 망가지지만 강한 의지로 매번 승리를 쟁취하고 있다.</p>'
             },
             'winter': {
                 'title': '겨울',
@@ -65,14 +65,13 @@ const charaData = {
         'name': 'Stella Maris',
         'color': '#ff69b4',
         'versions': {
-            'base': {
+            'default': {
                 'title': '기본',
                 'thumb': 'assets/thumb/ste_default.jpg', // 실제 이미지 경로로 변경 필요
                 'img': 'assets/sheets/ste_default.jpg', // 실제 이미지 경로로 변경 필요
                 'imgPlaceholder': 'Stella 기본 설정화',
                 'desc': '<p>사고뭉치 순수악의 롭이어소년<br></p>'
             }
-            // 필요한 만큼 추가...
         }
     }
 };

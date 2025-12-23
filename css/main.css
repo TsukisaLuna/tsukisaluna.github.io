@@ -67,102 +67,72 @@
   opacity: 0;
 }
 
-/* 하단 캐릭터 선택 탭 */
+
+
+
+
+/* 하단 캐릭터 선택 탭 컨테이너 */
 .chara-selector-tabs {
-  grid-column: 1 / span 3; /* 가로 전체 차지 */
+  grid-column: 1 / span 3;
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 20px 0;
+  gap: 20px;
+  padding: 30px 0;
+  list-style: none; /* 리스트 점 제거 */
 }
+
+/* 개별 캐릭터 배너 아이템 */
 .chara-selector {
+  position: relative;
   cursor: pointer;
-  font-size: 1.1rem;
-  padding: 5px 15px;
-  transition: 0.3s;
+  width: 180px; /* 배너 너비 */
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
-.chara-selector.active {
-  color: #007bff;
-  font-weight: bold;
+/* 배너 이미지 컨테이너 */
+.banner-img {
+  width: 100%;
+  height: 80px; /* 배너 높이 */
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid transparent; /* 기본 상태 테두리 */
+  background-color: #eee;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
-.chara-selector:hover {
-  color: #007bff;
+
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 꽉 차게 */
+  filter: grayscale(80%); /* 비활성 캐릭터는 흑백 느낌 */
+  opacity: 0.7;
 }
 
-.chara-selector a {
-  text-decoration:none;
+/* --- 마우스 호버 및 액티브 상태 --- */
+
+/* 호버 시 */
+.chara-selector:hover .banner-img {
+  transform: translateY(-5px);
+  opacity: 1;
 }
 
+.chara-selector:hover .banner-img img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
 
+/* 활성화(선택)된 상태 */
+.chara-selector.active .banner-img {
+  border-color: #007bff; /* 파란색 테두리 */
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+  transform: scale(1.05); /* 살짝 커지는 효과 */
+}
 
-/* 모바일 대응 레이아웃 (768px 이하) */
-@media (max-width: 768px) {
-  /* 1. 세로 배치로 변경 */
-  .chara-container .row {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-  }
-
-  /* 2. 사이드바(버전 선택)를 가로 스크롤 형태로 변경 (선택사항) */
-  .chara-sidebar {
-      width: 100%;
-      margin-bottom: 15px;
-  }
-  .chara-sidebar ul {
-      flex-direction: row !important;
-      overflow-x: auto;
-      white-space: nowrap;
-      border-bottom: 1px solid #eee;
-  }
-  .chara-sidebar .list-group-item {
-      border-left: none !important;
-      border-bottom: 3px solid transparent;
-  }
-  .chara-sidebar .list-group-item.active {
-      border-bottom-color: #00bfff;
-  }
-
-  /* 3. 중앙 이미지 영역을 배경으로 사용 */
-  .chara-display-box {
-      width: 100%;
-      min-height: 400px;
-      position: relative;
-      z-index: 1;
-  }
-  
-  /* 캐릭터 시트 이미지에 블러 효과 적용 */
-  .chara-display-box img, .sheet-placeholder {
-      filter: blur(4px) brightness(0.8);
-      transition: 0.3s;
-  }
-
-  /* 4. 오른쪽 설명창을 이미지 위로 겹침 (Overlay) */
-  .col-md-3 {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      z-index: 2;
-      
-      /* 반투명 유리창 효과 (Glassmorphism) */
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px); 
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      
-      /* 설명이 길어질 경우 대비 */
-      max-height: 200px;
-      overflow-y: auto;
-  }
-
-  #charaNameTitle {
-      font-size: 1.2rem;
-      margin-bottom: 5px;
-  }
+.chara-selector.active .banner-img img {
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
 /* 반응형 대응: 화면이 작아지면 세로로 배치 */
@@ -176,5 +146,4 @@
       display: flex;
       gap: 10px;
   }
-
 }
