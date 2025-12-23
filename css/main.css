@@ -5,6 +5,10 @@
   font-display: swap;
 }
 
+html {
+  font-family: 'OneStoreMobilePop';
+}
+
 .bg-main {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-maincolor-rgb), var(--bs-bg-opacity)) !important;
@@ -91,7 +95,7 @@
   width: 400px; /* 배너 너비 */
   transition: all 0.3s ease;
   text-align: center;
-  
+
   list-style-type: none;
 }
 
