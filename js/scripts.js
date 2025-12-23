@@ -150,7 +150,7 @@ $(document).ready(function() {
         $('#versionList .list-group-item').first().trigger('click');
         $('#charaNameTitle').text(newCharaData.name); // 오른쪽 상단 이름 변경
 
-        const targetVersion = $(this).data('target');
+        const targetVersion = $('#versionList .list-group-item').first();
         const data = charaData[activeCharacter].versions[targetVersion];
 
         const $displayArea = $('#charaDisplayArea');
