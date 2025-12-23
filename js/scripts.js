@@ -50,14 +50,14 @@ const charaData = {
                 'thumb': 'assets/thumb/tsu_boxing.jpg',
                 'img': 'assets/sheets/tsu_boxing1.jpg', // 실제 이미지 경로로 변경 필요
                 'imgPlaceholder': 'Tsukisa 킥복싱 Ver.',
-                'desc': '<p>폭력과 어울리지 않아 보이는 아이지만 격투기에도 도전!<br>작은 충격에도 상처가 나서, 경기 때마다 귀여운 얼굴이 매번 망가지지만, 강한 의지로 매번 승리를 쟁취하고 있다.</p>'
+                'desc': '<p>싸움과 멀 것 같은 아이인데 재미를 느껴 도전!<br>작은 충격에도 상처가 나서, 경기 때마다 귀여운 얼굴이 매번 망가지지만, 강한 의지로 매번 승리를 쟁취하고 있다.</p>'
             },
             'winter': {
                 'title': '겨울',
                 'thumb': 'assets/thumb/tsu_winter.jpg',
                 'img': 'assets/sheets/tsu_winter.jpg', // 실제 이미지 경로로 변경 필요
                 'imgPlaceholder': 'Tsukisa 겨울 코트 Ver.',
-                'desc': '<p></p>'
+                'desc': '<p>"겨울에는 따뜻하게 입어야지!" 하며 기존의 흰 장갑 대신해서 동물장갑과 동물 발모양 부츠를 꺼내들었다!</p>'
             }
         }
     },
