@@ -1,43 +1,332 @@
 <!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>月作ちゃんでより</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/main.css" rel="stylesheet" type="text/css" />
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </head>
-    <body style="font-family: 'OneStoreMobilePop';">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-main fixed-bottom">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="javascript:void(0)" onclick="acyncMovePage('./main.html');">TsukisaLuna</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="javascript:void(0)" onclick="acyncMovePage('./main.html');">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="javascript:void(0)" onclick="acyncMovePage('./chara.html');">Charater</a></li>
-                        <li class="nav-item"><a class="nav-link" href="javascript:void(0)" onclick="acyncMovePage('./gallery.html');">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="javascript:void(0)" onclick="acyncMovePage('./sabun.html');">BMS差分</a></li>
-                    </ul>
-                </div>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tsukisa.info</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-dot"></div>
+    tsukisa.info
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="switchPage('home', this)">🏠 홈</button>
+    <button class="nav-tab" onclick="switchPage('chars', this)">🐾 캐릭터</button>
+    <button class="nav-tab" onclick="switchPage('bms', this)">🎵 BMS</button>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <div class="home-wrap">
+    <div class="profile-card">
+      <div class="card-band"></div>
+
+      <div class="avatar-area">
+        <div class="avatar-circle">🐺</div>
+        <div>
+          <div class="name-kr">츠키사</div>
+          <div class="name-en">TsukisaLuna</div>
+          <div class="quote-bubble">동물귀 좋아 🐾</div>
+        </div>
+      </div>
+
+      <div class="cute-divider"></div>
+
+      <div class="info-row">
+        <div class="info-icon">🎮</div>
+        <div>
+          <div class="info-label">취미 &amp; 관심사</div>
+          <div class="tag-row">
+            <span class="tag">리듬게임</span>
+            <span class="tag">트릭컬리바이브</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-icon">🌙</div>
+        <div>
+          <div class="info-label">캐릭터 설정</div>
+          <div class="info-text">매사 활발하지만 어느 때는<br>부끄러움도 타는 늑대아이</div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-icon">💬</div>
+        <div>
+          <div class="info-label">연락처</div>
+          <a class="link-tag" href="https://x.com/TsukisaLuna" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.263 5.632 5.9-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            @TsukisaLuna
+          </a>
+        </div>
+      </div>
+
+      <div class="card-deco">
+        <div class="deco-dot" style="background:var(--main)"></div>
+        <div class="deco-dot" style="background:var(--main-light)"></div>
+        <div class="deco-dot" style="background:var(--main-pale)"></div>
+        <div class="deco-dot" style="background:var(--accent)"></div>
+        <div class="deco-dot" style="background:var(--accent2)"></div>
+        <div class="deco-dot" style="background:var(--main-pale)"></div>
+        <div class="deco-dot" style="background:var(--main-light)"></div>
+        <div class="deco-dot" style="background:var(--main)"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHARACTERS -->
+<div class="page" id="page-chars">
+  <div class="chars-wrap">
+    <div class="page-title">
+      <div class="title-icon">🐾</div>
+      캐릭터 시트
+    </div>
+
+    <!-- 츠키사 -->
+    <div class="char-section">
+      <div class="char-header">
+        <div class="char-ava blue">🐺</div>
+        <div>
+          <div class="char-name">츠키사</div>
+          <div class="char-sub">매사 활발하지만 어느 때는 부끄러움도 타는 늑대아이</div>
+        </div>
+        <div class="char-badge blue">Wolf Girl</div>
+      </div>
+
+      <div class="sheet-grid grid-3" style="margin-bottom:1.2rem">
+        <div class="sheet-card" onclick="openLb('images/Summer_Default.png')">
+          <div class="sheet-img-wrap ratio-4-3">
+            <img class="sheet-img" src="images/Summer_Default.png" alt="서머 버전">
+          </div>
+          <div class="sheet-label">
+            <div class="label-dot"></div>
+            <div>
+              <div class="sheet-ver">Outfit A</div>
+              <div class="sheet-name">Summer ver.</div>
             </div>
-        </nav>
-        <!-- Page Content-->
-        <main>
-            <div id="main" class="container px-4 px-lg-5">
-                
+          </div>
+        </div>
+
+        <div class="sheet-card" onclick="openLb('images/Boxing_Sheet1.png')">
+          <div class="sheet-img-wrap ratio-4-3">
+            <img class="sheet-img" src="images/Boxing_Sheet1.png" alt="복싱 버전">
+          </div>
+          <div class="sheet-label">
+            <div class="label-dot"></div>
+            <div>
+              <div class="sheet-ver">Outfit B</div>
+              <div class="sheet-name">Boxing ver.</div>
             </div>
-        </main>
-    </body>
+          </div>
+        </div>
+
+        <div class="sheet-card" onclick="openLb('images/Winter_Default.png')">
+          <div class="sheet-img-wrap ratio-4-3">
+            <img class="sheet-img" src="images/Winter_Default.png" alt="윈터 버전">
+          </div>
+          <div class="sheet-label">
+            <div class="label-dot"></div>
+            <div>
+              <div class="sheet-ver">Outfit C</div>
+              <div class="sheet-name">Winter ver.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sheet-grid grid-1">
+        <div class="sheet-card" onclick="openLb('images/Boxing_Sheet2.png')">
+          <div class="sheet-img-wrap ratio-wide">
+            <img class="sheet-img" src="images/Boxing_Sheet2.png" alt="부가설명" style="object-position:center">
+          </div>
+          <div class="sheet-label">
+            <div class="label-dot"></div>
+            <div>
+              <div class="sheet-ver">Detail Sheet</div>
+              <div class="sheet-name">Boxing — 부가설명 시트</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 스텔라 -->
+    <div class="char-section">
+      <div class="char-header">
+        <div class="char-ava red">🐰</div>
+        <div>
+          <div class="char-name red">스텔라</div>
+          <div class="char-sub">격투기를 좋아하는 장난끼 많은 사고뭉치 롭이어토끼소년</div>
+        </div>
+        <div class="char-badge red">Lop-ear Rabbit</div>
+      </div>
+
+      <div class="sheet-grid grid-1">
+        <div class="sheet-card" onclick="openLb('images/stella_default.png')">
+          <div class="sheet-img-wrap ratio-wide">
+            <img class="sheet-img" src="images/stella_default.png" alt="스텔라 시트" style="object-position:center">
+          </div>
+          <div class="sheet-label">
+            <div class="label-dot red"></div>
+            <div>
+              <div class="sheet-ver">Default Sheet</div>
+              <div class="sheet-name">Stella — 기본 캐릭터시트</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BMS PAGE -->
+<div class="page" id="page-bms">
+  <div class="bms-wrap">
+
+    <div class="page-title">
+      <div class="title-icon">🎵</div>
+      BMS
+    </div>
+
+    <div class="bms-table-wrap">
+      <table class="bms-table">
+        <thead>
+          <tr>
+            <th>Lv</th>
+            <th>Title</th>
+            <th class="center">Total</th>
+            <th class="center col-total">Notes</th>
+            <th class="center col-tpn">tpn</th>
+            <th class="center">譜面</th>
+            <th class="center">IR</th>
+            <th class="center">DL</th>
+          </tr>
+        </thead>
+        <tbody id="bms-tbody">
+          <tr><td colspan="8" class="bms-empty">로딩 중...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLb()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <div class="lb-close" onclick="closeLb()">✕</div>
+    <img id="lb-img" src="" alt="">
+  </div>
+</div>
+
+<script>
+  function switchPage(id, btn) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo(0, 0);
+  }
+  function openLb(src) {
+    document.getElementById('lb-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+
+  /* BMS JSON 로드 & 렌더 */
+  async function loadBMS() {
+    try {
+      const res  = await fetch('./src/data.json');
+      const data = await res.json();
+      renderBMS(data);
+    } catch (e) {
+      document.getElementById('bms-tbody').innerHTML =
+        '<tr><td colspan="8" class="bms-empty">데이터를 불러올 수 없어요 🥲</td></tr>';
+    }
+  }
+
+  function renderBMS(data) {
+    const tbody = document.getElementById('bms-tbody');
+
+    if (!data.length) {
+      tbody.innerHTML = '<tr><td colspan="8" class="bms-empty">데이터가 없어요</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = data.map(song => {
+      /* ── 여기서 JSON 키를 맞춰주세요 ── */
+      const level    = song.v_level   ?? '';
+      const title    = song.o_title   ?? '';
+      const subtitle = song.subtitle  ?? '';
+      const total    = song.Total     ?? '';
+      const notes    = song['Total Notes'] ?? '';
+      const tpn      = song.tpn       ?? '';
+      const youtube  = song.youtube   ?? '';
+      const mirDiff  = song.mir_diff  ?? '';
+      const urlDiff  = song.url_diff  ?? '';
+      const url      = song.url       ?? '';
+      /* ────────────────────────────── */
+
+      const isHalf   = level.startsWith('☆');
+      const levelCls = isHalf ? 'half' : 'star';
+
+      const playBtn = youtube
+        ? `<a class="bms-btn play" href="https://youtu.be/${youtube}" target="_blank">▶</a>`
+        : `<span class="bms-btn disabled">▶</span>`;
+
+      const mirBtn = mirDiff
+        ? `<a class="bms-btn ir" href="${mirDiff}" target="_blank">MinIR</a>`
+        : '';
+
+      const lr2Btn = url
+        ? `<a class="bms-btn ir" href="${url}" target="_blank">LR2IR</a>`
+        : '';
+
+      const dlBtn = urlDiff
+        ? `<a class="bms-btn dl" href="${urlDiff}" target="_blank">DL</a>`
+        : `<span class="bms-btn disabled">DL</span>`;
+
+      return `
+        <tr>
+          <td><span class="bms-level ${levelCls}">${level}</span></td>
+          <td>
+            <div class="bms-title">${title}</div>
+            ${subtitle ? `<div class="bms-subtitle">${subtitle}</div>` : ''}
+          </td>
+          <td class="bms-num center">${total}</td>
+          <td class="bms-num center col-total">${notes}</td>
+          <td class="bms-tpn center col-tpn">${tpn}</td>
+          <td class="center">${playBtn}</td>
+          <td class="center"><div class="bms-links">${lr2Btn}${mirBtn}</div></td>
+          <td class="center">${dlBtn}</td>
+        </tr>`;
+    }).join('');
+  }
+
+  /* 페이지 첫 진입 시 한 번만 로드 */
+  let bmsLoaded = false;
+  const origSwitch = switchPage;
+  switchPage = function(id, btn) {
+    origSwitch(id, btn);
+    if (id === 'bms' && !bmsLoaded) {
+      bmsLoaded = true;
+      loadBMS();
+    }
+  };
+</script>
+</body>
 </html>
