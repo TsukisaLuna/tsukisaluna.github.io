@@ -22,7 +22,7 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'ONE Mobile POP', 'ONE-Mobile-POP', 'M PLUS Rounded 1c', 'Jua', 'Noto Sans KR', sans-serif;
+    font-family: 'ONE Mobile POP', 'ONE-Mobile-POP', 'M PLUS Rounded 1c', 'Jua', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
   }
