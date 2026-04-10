@@ -336,12 +336,9 @@
   }
 
   .char-ava {
-    width: 52px; height: 52px;
+    width: 60px; height: 60px;
     border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
+    overflow: hidden;
     flex-shrink: 0;
   }
 
