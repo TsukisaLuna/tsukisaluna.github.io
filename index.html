@@ -102,7 +102,7 @@
       </div>
 
       <div class="sheet-grid grid-3" style="margin-bottom:1.2rem">
-        <div class="sheet-card" onclick="openLb('images/Summer_Default.png')">
+        <div class="sheet-card" onclick="openLb('assets/images/Summer_Default.png')">
           <div class="sheet-img-wrap ratio-4-3">
             <img class="sheet-img" src="images/Summer_Default.png" alt="서머 버전">
           </div>
@@ -115,7 +115,7 @@
           </div>
         </div>
 
-        <div class="sheet-card" onclick="openLb('images/Boxing_Sheet1.png')">
+        <div class="sheet-card" onclick="openLb(['assets/images/Boxing_Sheet1.png','assets/images/Boxing_Sheet2.png'])">
           <div class="sheet-img-wrap ratio-4-3">
             <img class="sheet-img" src="images/Boxing_Sheet1.png" alt="복싱 버전">
           </div>
@@ -128,7 +128,7 @@
           </div>
         </div>
 
-        <div class="sheet-card" onclick="openLb('images/Winter_Default.png')">
+        <div class="sheet-card" onclick="openLb('assets/images/Winter_Default.png')">
           <div class="sheet-img-wrap ratio-4-3">
             <img class="sheet-img" src="images/Winter_Default.png" alt="윈터 버전">
           </div>
@@ -137,21 +137,6 @@
             <div>
               <div class="sheet-ver">Outfit C</div>
               <div class="sheet-name">Winter ver.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="sheet-grid grid-1">
-        <div class="sheet-card" onclick="openLb('images/Boxing_Sheet2.png')">
-          <div class="sheet-img-wrap ratio-wide">
-            <img class="sheet-img" src="images/Boxing_Sheet2.png" alt="부가설명" style="object-position:center">
-          </div>
-          <div class="sheet-label">
-            <div class="label-dot"></div>
-            <div>
-              <div class="sheet-ver">Detail Sheet</div>
-              <div class="sheet-name">Boxing — 부가설명 시트</div>
             </div>
           </div>
         </div>
@@ -224,7 +209,10 @@
 <div class="lightbox" id="lightbox" onclick="closeLb()">
   <div class="lightbox-inner" onclick="event.stopPropagation()">
     <div class="lb-close" onclick="closeLb()">✕</div>
+    <button class="lb-nav" id="lb-prev" onclick="lbPrev()">‹</button>
     <img id="lb-img" src="" alt="">
+    <button class="lb-nav" id="lb-next" onclick="lbNext()">›</button>
+    <div class="lb-counter" id="lb-counter"></div>
   </div>
 </div>
 
@@ -236,16 +224,39 @@
     btn.classList.add('active');
     window.scrollTo(0, 0);
   }
-  function openLb(src) {
-    document.getElementById('lb-img').src = src;
+
+  let lbImages = [];
+  let lbIndex  = 0;
+
+  function openLb(imgs) {
+    lbImages = Array.isArray(imgs) ? imgs : [imgs];
+    lbIndex  = 0;
+    updateLb();
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
+
+  function updateLb() {
+    document.getElementById('lb-img').src = lbImages[lbIndex];
+    document.getElementById('lb-counter').textContent =
+      lbImages.length > 1 ? `${lbIndex + 1} / ${lbImages.length}` : '';
+    document.getElementById('lb-prev').style.display = lbImages.length > 1 ? 'flex' : 'none';
+    document.getElementById('lb-next').style.display = lbImages.length > 1 ? 'flex' : 'none';
+  }
+
+  function lbPrev() { lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length; updateLb(); }
+  function lbNext() { lbIndex = (lbIndex + 1) % lbImages.length; updateLb(); }
+
   function closeLb() {
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
   }
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft')  lbPrev();
+    if (e.key === 'ArrowRight') lbNext();
+  });
 
   /* BMS JSON 로드 & 렌더 */
   async function loadBMS() {
