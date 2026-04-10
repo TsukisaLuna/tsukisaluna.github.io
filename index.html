@@ -258,54 +258,29 @@
     const current = getActivePageId();
     const idx = pageOrder.indexOf(current);
     const nextIdx = direction === 'left' ? idx + 1 : idx - 1;
-
     if (nextIdx < 0 || nextIdx >= pageOrder.length) return;
-
-    const nextId = pageOrder[nextIdx];
     const btn = document.querySelectorAll('.nav-tab')[nextIdx];
-    switchPage(nextId, btn);
+    switchPage(pageOrder[nextIdx], btn);
   }
 
-  // 터치 스와이프
-  let touchStartX = 0;
-  let touchStartY = 0;
+  let startX = 0;
+  let startY = 0;
 
-  document.addEventListener('touchstart', e => {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-  }, { passive: true });
-
-  document.addEventListener('touchend', e => {
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    const dy = e.changedTouches[0].clientY - touchStartY;
-
-    // 수평 스와이프만 감지 (수직 스크롤 제외)
-    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
-
-    swipeTo(dx < 0 ? 'left' : 'right');
+  document.addEventListener('pointerdown', e => {
+    startX = e.clientX;
+    startY = e.clientY;
   });
 
-  // 마우스 드래그
-  let mouseStartX = 0;
-  let isDragging = false;
-
-  document.addEventListener('mousedown', e => {
-    mouseStartX = e.clientX;
-    isDragging = true;
-  });
-
-  document.addEventListener('mouseup', e => {
-    if (!isDragging) return;
-    isDragging = false;
-
-    const dx = e.clientX - mouseStartX;
-    if (Math.abs(dx) < 80) return; // 최소 드래그 거리
-
+  document.addEventListener('pointerup', e => {
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy)) return;
     swipeTo(dx < 0 ? 'left' : 'right');
   });
 
   document.addEventListener('mouseleave', () => { isDragging = false; });
 
+  /* light box */
   let lbImages = [];
   let lbIndex  = 0;
 
@@ -337,6 +312,14 @@
     if (e.key === 'Escape') closeLb();
     if (e.key === 'ArrowLeft')  lbPrev();
     if (e.key === 'ArrowRight') lbNext();
+  });
+
+  document.addEventListener('pointerup', e => {
+    if (document.getElementById('lightbox').classList.contains('open')) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy)) return;
+    swipeTo(dx < 0 ? 'left' : 'right');
   });
 
   /* BMS JSON 로드 & 렌더 */
