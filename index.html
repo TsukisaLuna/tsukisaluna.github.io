@@ -8,6 +8,7 @@
   <link href="./css/main.css" rel="stylesheet">
 </head>
 <body>
+  <div class="bg-layer" id="bg-layer"></div>
 
 <nav>
   <div class="nav-logo">
@@ -109,8 +110,8 @@
           <img src="assets/profile/sisito_tsubox.png" alt="츠키사">
         </div>
         <div>
-          <div class="char-name">TsukisaLuna / 츠키사</div>
-          <div class="char-sub">매사 활발하지만 어느 때는 부끄러움도 타는 늑대아이</div>
+          <div class="char-name">Tsukisa Luna / 츠키사</div>
+          <div class="char-sub">매사 활발하지만 어느 때는 부끄러움도 타는 늑대소년</div>
         </div>
       </div>
 
@@ -163,7 +164,7 @@
           <img src="assets/profile/sisito_stebox.png" alt="스텔라">
         </div>
         <div>
-          <div class="char-name red">Stella Maris / 스텔라군</div>
+          <div class="char-name red">Stella Maris / 스텔라</div>
           <div class="char-sub">격투기를 좋아하는 장난끼 많은 사고뭉치 롭이어토끼 소년</div>
         </div>
       </div>
@@ -237,6 +238,14 @@
     document.getElementById('page-' + id).classList.add('active');
     btn.classList.add('active');
     window.scrollTo(0, 0);
+
+    // 홈일 때만 배경 표시
+    const bg = document.getElementById('bg-layer');
+    if (id === 'home') {
+      bg.classList.add('visible');
+    } else {
+      bg.classList.remove('visible');
+    }
   }
 
   let lbImages = [];
@@ -352,6 +361,10 @@
       loadBMS();
     }
   };
+
+  if (document.querySelector('.page.active').id === 'page-home') {
+    document.getElementById('bg-layer').classList.add('visible');
+  }
 </script>
 </body>
 </html>
