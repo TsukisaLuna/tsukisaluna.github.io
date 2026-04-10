@@ -1,0 +1,158 @@
+/* ════════════════ BMS ════════════════ */
+.bms-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+}
+
+.bms-table-wrap {
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 6px 24px var(--shadow-soft);
+    overflow: hidden;
+}
+
+.bms-table { 
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+/* Header */
+.bms-table thead tr {
+    background: var(--main);
+    color: #fff;
+}
+
+.bms-table thead th {
+    padding: 12px 14px;
+    font-family: 'OneStoreMobilePop', 'Noto Sans KR', sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.bms-table thead th.center { text-align: center; }
+
+/* Rows */
+.bms-table tbody tr {
+    border-bottom: 1px solid var(--main-pale);
+    transition: background 0.15s;
+}
+
+.bms-table tbody tr:last-child { border-bottom: none; }
+
+.bms-table tbody tr:hover { background: var(--main-paler); }
+
+.bms-table tbody td {
+    padding: 10px 14px;
+    color: var(--text);
+    white-space: nowrap;
+}
+
+.bms-table tbody td.center { text-align: center; }
+
+/* Level badge */
+.bms-level {
+    display: inline-block;
+    font-family: 'OneStoreMobilePop', 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    color: var(--main);
+    min-width: 36px;
+}
+
+.bms-level.star { color: var(--main); }
+.bms-level.half { color: var(--text-dim); }
+
+/* Title / subtitle */
+.bms-title {
+    font-family: 'OneStoreMobilePop', 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    color: var(--text);
+}
+
+.bms-subtitle {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 2px;
+}
+
+/* Numbers */
+.bms-num {
+    font-size: 13px;
+    color: var(--text);
+    text-align: right;
+}
+
+.bms-tpn {
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+/* Link buttons */
+.bms-links { display: flex; gap: 5px; align-items: center; }
+
+.bms-btn {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-family: 'OneStoreMobilePop', 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    transition: all 0.18s;
+    white-space: nowrap;
+}
+
+.bms-btn.play {
+    background: var(--main-pale);
+    color: var(--main);
+}
+
+.bms-btn.play:hover {
+    background: var(--main);
+    color: #fff;
+}
+
+.bms-btn.ir {
+    background: #eef5fc;
+    color: var(--main-dark);
+    border: 1px solid var(--main-pale);
+}
+
+.bms-btn.ir:hover {
+    background: var(--main-pale);
+}
+
+.bms-btn.dl {
+    background: var(--main);
+    color: #fff;
+}
+
+.bms-btn.dl:hover {
+    background: var(--main-dark);
+}
+
+.bms-btn.disabled {
+    background: var(--bg);
+    color: var(--text-dim);
+    pointer-events: none;
+}
+
+/* Empty / loading state */
+.bms-empty {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-dim);
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+    .bms-table { font-size: 12px; }
+    .bms-table thead th,
+    .bms-table tbody td { padding: 8px 10px; }
+    .col-tpn,
+    .col-total { display: none; }
+}
