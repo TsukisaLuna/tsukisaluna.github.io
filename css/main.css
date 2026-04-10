@@ -288,6 +288,7 @@
     background: var(--main);
     border-radius: 999px;
     padding: 7px 20px;
+    bottom-margin: 4px;
     font-size: 14px;
     color: #fff;
     text-decoration: none;
