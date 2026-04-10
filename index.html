@@ -232,6 +232,8 @@
 </div>
 
 <script>
+  const pageOrder = ['home', 'chars', 'bms'];
+
   function switchPage(id, btn) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
@@ -247,6 +249,62 @@
       bg.classList.remove('visible');
     }
   }
+
+  function getActivePageId() {
+    return document.querySelector('.page.active').id.replace('page-', '');
+  }
+
+  function swipeTo(direction) {
+    const current = getActivePageId();
+    const idx = pageOrder.indexOf(current);
+    const nextIdx = direction === 'left' ? idx + 1 : idx - 1;
+
+    if (nextIdx < 0 || nextIdx >= pageOrder.length) return;
+
+    const nextId = pageOrder[nextIdx];
+    const btn = document.querySelectorAll('.nav-tab')[nextIdx];
+    switchPage(nextId, btn);
+  }
+
+  // 터치 스와이프
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  document.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  document.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+
+    // 수평 스와이프만 감지 (수직 스크롤 제외)
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
+
+    swipeTo(dx < 0 ? 'left' : 'right');
+  });
+
+  // 마우스 드래그
+  let mouseStartX = 0;
+  let isDragging = false;
+
+  document.addEventListener('mousedown', e => {
+    mouseStartX = e.clientX;
+    isDragging = true;
+  });
+
+  document.addEventListener('mouseup', e => {
+    if (!isDragging) return;
+    isDragging = false;
+
+    const dx = e.clientX - mouseStartX;
+    if (Math.abs(dx) < 80) return; // 최소 드래그 거리
+
+    swipeTo(dx < 0 ? 'left' : 'right');
+  });
+
+  document.addEventListener('mouseleave', () => { isDragging = false; });
 
   let lbImages = [];
   let lbIndex  = 0;
