@@ -22,7 +22,7 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'ONE Mobile POP', 'ONE-Mobile-POP', 'MPLUSRounded1c', 'Jua', 'Noto Sans KR', sans-serif;
+    font-family: 'ONE Mobile POP', 'ONE-Mobile-POP', 'M PLUS Rounded 1c', 'Jua', 'Noto Sans KR', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -109,7 +109,7 @@
   .nav-tabs { display: flex; gap: 8px; }
 
   .nav-tab {
-    font-family: 'ONE Mobile POP', 'ONE-Mobile-POP', 'MPLUSRounded1c', 'Jua', sans-serif;
+    font-family: 'ONE Mobile POP', 'ONE-Mobile-POP', 'M PLUS Rounded 1c', 'Jua', sans-serif;
     font-size: 14px;
     color: var(--text-dim);
     padding: 7px 20px;
