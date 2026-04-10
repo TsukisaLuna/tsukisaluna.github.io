@@ -53,7 +53,7 @@
     position: fixed;
     inset: 0;
     z-index: 0;
-    background-image: url('assats/img/bg.png');
+    background-image: url('/assets/img/bg.png');
     background-size: cover;
     background-position: center;
     filter: blur(18px) brightness(0.85);
