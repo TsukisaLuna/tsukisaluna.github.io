@@ -4,3 +4,11 @@
     font-weight: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'MPLUSRounded1c';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/m-plus-rounded-1c@4.5.0/files/m-plus-rounded-1c-japanese-400-normal.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/npm/@fontsource/m-plus-rounded-1c@4.5.0/files/m-plus-rounded-1c-japanese-400-normal.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+  }
