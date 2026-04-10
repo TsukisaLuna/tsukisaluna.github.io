@@ -12,6 +12,15 @@
     overflow: hidden;
 }
 
+.bms-wrap .page-title {
+    animation: fadeUp 0.35s ease both;
+  }
+  
+  .bms-table-wrap {
+    animation: fadeUp 0.45s ease both;
+    animation-delay: 0.08s;
+  }
+
 .bms-table { 
     width: 100%;
     border-collapse: collapse;
