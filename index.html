@@ -212,9 +212,9 @@
           <tr>
             <th>Lv</th>
             <th>Title</th>
-            <th class="center" colspan="4">Chart Data</th>
-            <th class="center">IR</th>
-            <th class="center">DL</th>
+            <th colspan="4">Chart Data</th>
+            <th>IR</th>
+            <th>DL</th>
           </tr>
         </thead>
         <tbody id="bms-tbody">
@@ -343,8 +343,8 @@
 
     tbody.innerHTML = data.map(song => {
       /* ── 여기서 JSON 키를 맞춰주세요 ── */
-      const md5      = song.md5   ?? '';
-      const sha256   = song.sha256   ?? '';
+      const md5      = song.md5.toLowerCase()  ?? '';
+      const sha256   = song.sha256.toLowerCase()  ?? '';
       const level    = song.level   ?? '';
       const title    = song.title   ?? '';
       const dl_title = song.dl_title   ?? '';
@@ -363,7 +363,7 @@
         : `<span class="bms-btn disabled">📄</span>`;
 
       const mirBtn = sha256
-        ? `<a class="bms-btn ir" href="https://www.gaftalk.com/minir/#/viewer/song/${sha256}" target="_blank">MinIR</a>`
+        ? `<a class="bms-btn ir" href="https://www.gaftalk.com/minir/#/viewer/song/${sha256}/0" target="_blank">MinIR</a>`
         : '';
 
       const lr2Btn = md5
@@ -371,7 +371,7 @@
         : '';
 
       const dlBtn = dl_title
-        ? `<a class="bms-btn dl" href="https://tsukisa.info/sabun/${dl_title}" target="_blank">DL</a>`
+        ? `<a class="bms-btn dl" href="https://tsukisa.info/sabun/${dl_title}.zip" target="_blank">DL</a>`
         : `<span class="bms-btn disabled">DL</span>`;
 
       return `
