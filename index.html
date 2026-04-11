@@ -119,8 +119,8 @@
           <img src="assets/profile/sisito_tsubox.png" alt="츠키사">
         </div>
         <div>
-          <div class="char-name">Tsukisa Luna / 츠키사</div>
-          <div class="char-sub">매사 활발하지만 어느 때는 부끄러움도 타는 늑대소년</div>
+          <div class="char-name">Tsukisa Luna (츠키사)</div>
+          <div class="char-sub"></div>
         </div>
       </div>
 
@@ -173,7 +173,7 @@
           <img src="assets/profile/sisito_stebox.png" alt="스텔라">
         </div>
         <div>
-          <div class="char-name red">Stella Maris / 스텔라</div>
+          <div class="char-name red">Stella Maris (스텔라)</div>
           <div class="char-sub">격투기를 좋아하는 장난끼 많은 사고뭉치 롭이어토끼 소년</div>
         </div>
       </div>
@@ -212,16 +212,13 @@
           <tr>
             <th>Lv</th>
             <th>Title</th>
-            <th class="center">Total</th>
-            <th class="center col-total">Notes</th>
-            <th class="center col-tpn">tpn</th>
-            <th class="center">譜面</th>
+            <th class="center" colspan="4">Chart Data</th>
             <th class="center">IR</th>
             <th class="center">DL</th>
           </tr>
         </thead>
         <tbody id="bms-tbody">
-          <tr><td colspan="8" class="bms-empty">로딩 중...</td></tr>
+          <tr><td colspan="10" class="bms-empty">로딩 중...</td></tr>
         </tbody>
       </table>
     </div>
@@ -346,49 +343,46 @@
 
     tbody.innerHTML = data.map(song => {
       /* ── 여기서 JSON 키를 맞춰주세요 ── */
-      const level    = song.v_level   ?? '';
-      const title    = song.o_title   ?? '';
-      const subtitle = song.subtitle  ?? '';
+      const md5      = song.md5   ?? '';
+      const sha256   = song.sha256   ?? '';
+      const level    = song.level   ?? '';
+      const title    = song.title   ?? '';
+      const dl_title = song.dl_title   ?? '';
       const total    = song.Total     ?? '';
       const notes    = song['Total Notes'] ?? '';
-      const tpn      = song.tpn       ?? '';
+      const tpn      = (notes && total) ? (parseFloat(total) / parseFloat(notes)).toFixed(2) : '';
       const youtube  = song.youtube   ?? '';
-      const mirDiff  = song.mir_diff  ?? '';
-      const urlDiff  = song.url_diff  ?? '';
-      const url      = song.url       ?? '';
       /* ────────────────────────────── */
 
-      const isHalf   = level.startsWith('☆');
-      const levelCls = isHalf ? 'half' : 'star';
-
-      const playBtn = youtube
+      const youtubeBtn = youtube
         ? `<a class="bms-btn play" href="https://youtu.be/${youtube}" target="_blank">▶</a>`
         : `<span class="bms-btn disabled">▶</span>`;
 
-      const mirBtn = mirDiff
-        ? `<a class="bms-btn ir" href="${mirDiff}" target="_blank">MinIR</a>`
+      const scviewBtn = md5
+        ? `<a class="bms-btn play" href="https://bms-score-viewer.pages.dev/view?md5=${md5}" target="_blank">📄</a>`
+        : `<span class="bms-btn disabled">📄</span>`;
+
+      const mirBtn = sha256
+        ? `<a class="bms-btn ir" href="https://www.gaftalk.com/minir/#/viewer/song/${sha256}" target="_blank">MinIR</a>`
         : '';
 
-      const lr2Btn = url
-        ? `<a class="bms-btn ir" href="${url}" target="_blank">LR2IR</a>`
+      const lr2Btn = md5
+        ? `<a class="bms-btn ir" href="http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=${md5}" target="_blank">LR2IR</a>`
         : '';
 
-      const dlBtn = urlDiff
-        ? `<a class="bms-btn dl" href="${urlDiff}" target="_blank">DL</a>`
+      const dlBtn = dl_title
+        ? `<a class="bms-btn dl" href="https://tsukisa.info/sabun/${dl_title}" target="_blank">DL</a>`
         : `<span class="bms-btn disabled">DL</span>`;
 
       return `
         <tr>
-          <td><span class="bms-level ${levelCls}">${level}</span></td>
-          <td>
-            <div class="bms-title">${title}</div>
-            ${subtitle ? `<div class="bms-subtitle">${subtitle}</div>` : ''}
-          </td>
+          <td class="bms-level">🌙${level}</td>
+          <td class="bms-title">${title}</td>
+          <td class="center"><div class="bms-links">${youtubeBtn}${scviewBtn}</td>
           <td class="bms-num center">${total}</td>
           <td class="bms-num center col-total">${notes}</td>
           <td class="bms-tpn center col-tpn">${tpn}</td>
-          <td class="center">${playBtn}</td>
-          <td class="center"><div class="bms-links">${lr2Btn}${mirBtn}</div></td>
+          <td class="center"><div class="bms-links">${mirBtn}${lr2Btn}</div></td>
           <td class="center">${dlBtn}</td>
         </tr>`;
     }).join('');
