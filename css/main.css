@@ -93,6 +93,8 @@
   }
 
   .nav-logo {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 900;
     font-size: 18px;
     color: var(--main);
     display: flex;
@@ -109,8 +111,7 @@
   .nav-tabs { display: flex; gap: 8px; }
 
   .nav-tab {
-    font-family: 'Zen Maru Gothic';
-    font-weight: 900;
+    font-family: 'ONE Mobile POP', 'ONE-Mobile-POP', 'Zen Maru Gothic', 'Jua', sans-serif;
     font-size: 14px;
     color: var(--text-dim);
     padding: 7px 20px;
