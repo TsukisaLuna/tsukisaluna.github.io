@@ -131,8 +131,13 @@
   }
 
   /* ── PAGES ── */
-  .page { display: none; position: relative; z-index: 1; padding-top: 64px; min-height: 100vh; }
+  .page {
+    display: none; position: relative; z-index: 1; padding-top: 64px; min-height: 100vh;
+    touch-action: pan-y; /* 수직 스크롤은 허용, 수평은 JS가 처리 */
+  }
+  
   .page.active { display: block; }
+  
 
   /* ════════════════ HOME ════════════════ */
   .home-wrap {

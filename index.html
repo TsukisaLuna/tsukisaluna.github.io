@@ -288,6 +288,19 @@
     swipeTo(dx < 0 ? 'left' : 'right');
   });
 
+  document.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+
+  document.addEventListener('touchend', e => {
+    if (document.getElementById('lightbox').classList.contains('open')) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy)) return;
+    swipeTo(dx < 0 ? 'left' : 'right');
+  }, { passive: true });
+
   document.addEventListener('mouseleave', () => { isDragging = false; });
 
   /* light box */
