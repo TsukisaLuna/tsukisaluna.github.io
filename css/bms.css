@@ -164,7 +164,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 180px;
+        max-width: 220px;
     }
 
     /* 모바일에서 숨길 컬럼 */
