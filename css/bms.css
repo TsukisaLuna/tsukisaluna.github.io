@@ -66,7 +66,7 @@
 /* Level badge */
 .bms-level {
     display: inline-block;
-    font-family: 'OneStoreMobilePop', 'Noto Sans KR', sans-serif;
+    font-family: 'OneStoreMobilePop', 'Zen Maru Gothic', 'Jua', sans-serif;
     font-size: 12px;
     color: var(--main);
     min-width: 36px;
@@ -106,7 +106,7 @@
     padding: 3px 10px;
     border-radius: 999px;
     font-size: 11px;
-    font-family: 'OneStoreMobilePop', 'Noto Sans KR', sans-serif;
+    font-family: 'OneStoreMobilePop', 'Zen Maru Gothic', 'Jua', sans-serif;
     text-decoration: none;
     transition: all 0.18s;
     white-space: nowrap;
@@ -156,7 +156,7 @@
 }
 
 /* Responsive */
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
     .bms-table thead th,
     .bms-table tbody td { padding: 8px 10px; }
   
@@ -171,5 +171,24 @@
     .col-total,
     .col-notes,
     .col-tpn,
+    .col-dl { display: none; }
+  }
+
+  @media (max-width: 400px) {
+    .bms-table thead th,
+    .bms-table tbody td { padding: 8px 10px; }
+  
+    .bms-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 140px;
+    }
+
+    /* 모바일에서 숨길 컬럼 */
+    .col-total,
+    .col-notes,
+    .col-tpn,
+    .col-ir { display: none; }
     .col-dl { display: none; }
   }
