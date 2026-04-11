@@ -78,6 +78,7 @@
 /* Title / subtitle */
 .bms-title {
     font-family: 'Zen Maru Gothic', sans-serif;
+    weight: 900;
     font-size: 13px;
     color: var(--text);
     white-space: normal;
@@ -156,9 +157,19 @@
 
 /* Responsive */
 @media (max-width: 760px) {
-    .bms-table { font-size: 12px; }
     .bms-table thead th,
     .bms-table tbody td { padding: 8px 10px; }
+  
+    .bms-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 180px;
+    }
+
+    /* 모바일에서 숨길 컬럼 */
+    .col-total,
+    .col-notes,
     .col-tpn,
-    .col-total { display: none; }
-}
+    .col-dl { display: none; }
+  }
