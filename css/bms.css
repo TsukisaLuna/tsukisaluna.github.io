@@ -78,15 +78,11 @@
 /* Title / subtitle */
 .bms-title {
     font-family: 'Zen Maru Gothic', sans-serif;
-    font-weight: 900;
     font-size: 13px;
     color: var(--text);
-}
-
-.bms-subtitle {
-    font-size: 11px;
-    color: var(--text-dim);
-    margin-top: 2px;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.4;
 }
 
 /* Numbers */
