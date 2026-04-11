@@ -156,7 +156,22 @@
 }
 
 /* Responsive */
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
+    .bms-table thead th,
+    .bms-table tbody td { padding: 8px 10px; }
+  
+    .bms-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 180px;
+    }
+
+    /* 모바일에서 숨길 컬럼 */
+    .col-dl { display: none; }
+  }
+
+  @media (max-width: 800px) {
     .bms-table thead th,
     .bms-table tbody td { padding: 8px 10px; }
   
