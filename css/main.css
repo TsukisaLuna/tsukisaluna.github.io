@@ -23,7 +23,9 @@
   }
 
   /* JP 전용 폰트 */
-  :root.lang-ja body {
+  :root.lang-ja body,
+  :root.lang-ja .nav-tab,
+  :root.lang-ja .nav-logo {
     font-family: 'Zen Maru Gothic', sans-serif;
     font-weight: 900;
   }
