@@ -15,6 +15,7 @@ const i18n = {
 
     tsu_name:      '츠키사 루나　(츠키사군)',
     tsu_desc:      '언제나 밝고 긍정적인 호기심 많은 늑대 소년',
+    
     ste_name:      '스텔라 마리스　(스텔라군)',
     ste_desc:      '장난을 매우 좋아하는 사고뭉치 롭이어토끼 소년',
 
@@ -38,6 +39,7 @@ const i18n = {
 
     tsu_name:      'Tsukisa Luna',
     tsu_desc:      'Always bright and positive, a curious wolf boy',
+
     tsu_name:      'Stella Maris',
     ste_desc:      'A mischievous troublemaker lop-ear rabbit boy who loves fighting',
 
@@ -61,6 +63,7 @@ const i18n = {
 
     tsu_name:      '月作　ルーナ （月作くん)',
     tsu_desc:      'いつも明るくポジティブな好奇心旺盛な狼少年',
+
     tsu_name:      'ステラ　マーリス （ステラくん)',
     ste_desc:      'いたずら好きなトラブルメーカーのロップイヤーうさぎ少年',
 
