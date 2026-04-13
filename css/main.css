@@ -25,7 +25,8 @@
   /* JP 전용 폰트 */
   :root.lang-ja body,
   :root.lang-ja .nav-tab,
-  :root.lang-ja .nav-logo {
+  :root.lang-ja .nav-logo,
+  :root.lang-ja .char-name {
     font-family: 'Zen Maru Gothic', sans-serif;
     font-weight: 900;
   }
@@ -280,7 +281,7 @@
     font-size: 11px;
     color: var(--text-dim);
     margin-bottom: 4px;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'OneStoreMobilePop','Noto Sans KR', sans-serif;
   }
 
   .tag-row { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -406,7 +407,7 @@
     font-size: 20px;
     color: var(--main);
     line-height: 1.2;
-    font-family: 'Zen Maru Gothic', sans-serif;
+    font-family: 'OneStoreMobilePop', 'Zen Maru Gothic', sans-serif;
     font-weight: 900;
   }
 
@@ -416,7 +417,7 @@
     font-size: 12px;
     color: var(--text-dim);
     margin-top: 3px;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'OneStoreMobilePop','Noto Sans KR', sans-serif;
   }
 
   .char-header-tags {
@@ -493,7 +494,7 @@
     background: var(--stella-redtgbg);
     border: 1.5px solid var(--stella-redtgbg);
     color: var(--stella-redtg);
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'OneStoreMobilePop','Noto Sans KR', sans-serif;
     white-space: nowrap;
   }
 
@@ -511,7 +512,7 @@
     background: var(--main-paler);
     border: 1px solid var(--main-pale);
     color: var(--main);
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'OneStoreMobilePop','Noto Sans KR', sans-serif;
   }
 
   .sheet-tag.red {
@@ -521,7 +522,7 @@
     background: var(--stella-redtgbg);
     border: 1px solid var(--stella-redtgbg);
     color: var(--stella-redtg);
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'OneStoreMobilePop','Noto Sans KR', sans-serif;
   }
   
 
