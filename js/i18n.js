@@ -1,8 +1,10 @@
 const i18n = {
 
   ko: {
+    nav_title:     '🌙츠키사군으로부터',
     nav_main:      '메인',
-    nav_sheets:    '시트',
+    nav_sheets:    '캐릭터시트',
+
     page_sheets:   '캐릭터 시트',
     profile_name:  '츠키사',
     profile_quote: '츠키사군 귀여워해주세요 :)',
@@ -11,7 +13,7 @@ const i18n = {
     label_contact: 'Contect',
     tag_game1:     '리듬게임',
     tag_game2:     '트릭컬:리바이브 (KR/JP)',
-    tag_game3:     '엔드필드',
+    tag_game3:     '명일방주:엔드필드',
 
     tsu_name:      '츠키사 루나　(츠키사군)',
     tsu_desc:      '언제나 밝고 긍정적인 호기심 많은 늑대 소년',
@@ -25,6 +27,7 @@ const i18n = {
   },
 
   en: {
+    nav_title:     '🌙From Tsukisa',
     nav_main:      'Main',
     nav_sheets:    'Sheets',
     page_sheets:   'Character Sheets',
@@ -35,7 +38,7 @@ const i18n = {
     label_contact: 'Contact',
     tag_game1:     'Rhythm Game',
     tag_game2:     'Trickcal:Chibi GO (KR/JP)',
-    tag_game3:     'EndField',
+    tag_game3:     'Arknights:EndField',
 
     tsu_name:      'Tsukisa Luna',
     tsu_desc:      'Always bright and positive, a curious wolf boy',
@@ -49,6 +52,8 @@ const i18n = {
   },
 
   ja: {
+    nav_title:     '🌙月作くんでより',
+
     nav_main:      'メイン',
     nav_sheets:    'シート',
     page_sheets:   'キャラクターシート',
@@ -58,8 +63,8 @@ const i18n = {
     label_game:    'ゲーム',
     label_contact: '連絡先',
     tag_game1:     '音ゲー',
-    tag_game2:     'トリッカル:もちほっぺ (KR/JP)',
-    tag_game3:     'エンドフィールド',
+    tag_game2:     'トリッカル：もちほっぺ (KR/JP)',
+    tag_game3:     '明日方舟：エンドフィールド',
 
     tsu_name:      '月作　ルーナ （月作くん)',
     tsu_desc:      'いつも明るくポジティブな好奇心旺盛な狼少年',

@@ -112,7 +112,7 @@ nav {
 }
 
 .nav-logo {
-    font-family: var(--font-base);
+    font-family: var(--font-zen);
     font-weight: var(--font-weight-extra);
     font-size: 18px;
     color: var(--main);
@@ -124,8 +124,8 @@ nav {
 .nav-tabs { display: flex; gap: 8px; }
 
 .nav-tab {
-    font-family: var(--font-base);
-    font-weight: var(--font-weight-bold);
+    font-family: var(--font-zen);
+    font-weight: var(--font-weight-extra);
     font-size: 14px;
     color: var(--text-dim);
     padding: 7px 20px;
@@ -424,11 +424,6 @@ nav {
     font-size: 20px;
     color: var(--main);
     line-height: 1.2;
-}
-
-/* JP일 때 char-name bold */
-:root.lang-ja .char-name {
-    font-weight: 700;
 }
 
 .char-name.red { color: var(--stella-rednm); }

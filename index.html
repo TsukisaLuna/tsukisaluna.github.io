@@ -4,24 +4,22 @@
   <meta charset="UTF-8">
   <meta name="bmstable" content="./src/head.json">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>月作くんでより</title>
+  <title>🌙</title>
   <link href="./css/main.css" rel="stylesheet">
 </head>
 <body>
   <div class="bg-layer" id="bg-layer"></div>
 
   <nav>
-    <div class="nav-logo">
-      🌙月作くんでより
-    </div>
+    <div class="nav-logo" data-i18n="nav_title"></div>
     <div class="nav-tabs">
       <button class="nav-tab active" onclick="switchPage('home', this)">
         <span class="tab-icon">🏠</span>
-        <span class="tab-text" data-i18n="nav_main">Main</span>
+        <span class="tab-text" data-i18n="nav_main">Home</span>
       </button>
       <button class="nav-tab" onclick="switchPage('chars', this)">
         <span class="tab-icon">🎨</span>
-        <span class="tab-text" data-i18n="nav_sheets">Sheets</span>
+        <span class="tab-text" data-i18n="nav_sheets">캐릭터시트</span>
       </button>
       <button class="nav-tab" onclick="switchPage('bms', this)">
         <span class="tab-icon">🎹</span>
