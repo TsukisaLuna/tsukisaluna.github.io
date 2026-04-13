@@ -66,7 +66,8 @@
 /* Level badge */
 .bms-level {
     display: inline-block;
-    font-family: 'OneStoreMobilePop', 'Zen Maru Gothic', 'Jua', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 900;
     font-size: 12px;
     color: var(--main);
     min-width: 36px;
@@ -78,7 +79,7 @@
 /* Title / subtitle */
 .bms-title {
     font-family: 'Zen Maru Gothic', sans-serif;
-    weight: 900;
+    font-weight: 900;
     font-size: 13px;
     color: var(--text);
     white-space: normal;
@@ -106,7 +107,8 @@
     padding: 3px 10px;
     border-radius: 999px;
     font-size: 11px;
-    font-family: 'OneStoreMobilePop', 'Zen Maru Gothic', 'Jua', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 900;
     text-decoration: none;
     transition: all 0.18s;
     white-space: nowrap;
