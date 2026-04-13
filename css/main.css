@@ -21,12 +21,12 @@
     --stella-redtg: #c0392b;
     --stella-redtgbg: #fde8e8;
 
-    --font-pop: 'OneStoreMobilePop', sans-serif;
+    --font-maple: 'Maplestory', sans-serif;
     --font-zen: 'Zen Maru Gothic', sans-serif;
-    --font-base: var(--font-pop); /* 기본 폰트 변수 */
-    --font-weight-base: 400;
-    --font-weight-bold: 400;
-    --font-weight-extra: 400;
+    --font-base: var(--font-maple); /* 기본 폰트 변수 */
+    --font-weight-base: 300;
+    --font-weight-bold: 300;
+    --font-weight-extra: 700;
 
 }
 
@@ -229,7 +229,7 @@ nav {
 
 .name-en {
     font-family: var(--font-base);
-    font-weight: var(--font-weight-blod);
+    font-weight: var(--font-weight-bold);
     font-size: 13px;
     color: var(--text-dim);
     letter-spacing: 0.08em;
