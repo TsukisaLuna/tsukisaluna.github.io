@@ -24,6 +24,33 @@ const i18n = {
     bms_loading:   '로딩 중...',
     bms_error:     '데이터를 불러올 수 없어요 🥲',
     bms_empty:     '데이터가 없어요',
+
+    // Character Sheets
+    tsu_sheet1: '츠키사',
+    ste_sheet1: '스텔라',
+
+    tsu_sheet1_name: '여름 ver. (기본)',
+    tsu_sheet2_name: '파이터 ver.',
+    tsu_sheet3_name: '겨울 ver.',
+    ste_sheet1_name: '파이터 ver. (기본)',
+
+    // Tags
+    tsu_sheet_tag_11: '세라복',
+    tsu_sheet_tag_12: '장갑',
+    tsu_sheet_tag_13: '맨발',
+    tsu_sheet_tag_21: '후드티',
+    tsu_sheet_tag_22: '복싱장갑',
+    tsu_sheet_tag_23: '킥복싱',
+    tsu_sheet_tag_31: '망토',
+    tsu_sheet_tag_32: '스웨터',
+    tsu_sheet_tag_33: '육구 장갑',
+    tsu_sheet_tag_34: '육구 부츠',
+
+    ste_sheet_tag_11: '후드티',
+    ste_sheet_tag_12: '체인',
+    ste_sheet_tag_13: '반장갑',
+    ste_sheet_tag_14: '복싱장갑',
+    ste_sheet_tag_15: '킥복싱',
   },
 
   en: {
@@ -45,6 +72,33 @@ const i18n = {
 
     ste_name:      'Stella Maris',
     ste_desc:      'A mischievous troublemaker lop-ear rabbit boy who loves fighting',
+
+    // Character Sheets
+    tsu_sheet1: 'Tsukisa',
+    ste_sheet1: 'Stella',
+
+    tsu_sheet1_name: 'Summer ver. (default)',
+    tsu_sheet2_name: 'Fighter ver.',
+    tsu_sheet3_name: 'Kemono fit Winter ver.',
+    ste_sheet1_name: 'Fighter ver. (default)',
+
+    // Tags
+    tsu_sheet_tag_11: 'sailer',
+    tsu_sheet_tag_12: 'gloves',
+    tsu_sheet_tag_13: 'barefoot',
+    tsu_sheet_tag_21: 'hoodie',
+    tsu_sheet_tag_22: 'boxing gloves',
+    tsu_sheet_tag_23: 'kickboxing',
+    tsu_sheet_tag_31: 'cape',
+    tsu_sheet_tag_32: 'sweater',
+    tsu_sheet_tag_33: 'paw gloves',
+    tsu_sheet_tag_34: 'paw boots',
+
+    ste_sheet_tag_11: 'hoodie',
+    ste_sheet_tag_12: 'chain',
+    ste_sheet_tag_13: 'fingerless gloves',
+    ste_sheet_tag_14: 'boxing gloves',
+    ste_sheet_tag_15: 'kickboxing',
 
     bms_loading:   'Loading...',
     bms_error:     'Failed to load data 🥲',
@@ -71,6 +125,33 @@ const i18n = {
 
     ste_name:      'ステラ　マーリス （ステラくん)',
     ste_desc:      'いたずら好きなトラブルメーカーのロップイヤーうさぎ少年',
+
+    // Character Sheets
+    tsu_sheet1: '月作',
+    ste_sheet1: 'ステラ',
+
+    tsu_sheet1_name: 'サマー ver. (デフォルト)',
+    tsu_sheet2_name: 'ファイター ver.',
+    tsu_sheet3_name: 'ケモノフィット ウィンター ver.',
+    ste_sheet1_name: 'ファイター ver. (デフォルト)',
+
+    // Tags
+    tsu_sheet_tag_11: 'セーラー',
+    tsu_sheet_tag_12: '手袋',
+    tsu_sheet_tag_13: '裸足',
+    tsu_sheet_tag_21: 'フード',
+    tsu_sheet_tag_22: 'ボクシンググローブ',
+    tsu_sheet_tag_23: 'キックボクシング',
+    tsu_sheet_tag_31: 'マント',
+    tsu_sheet_tag_32: 'セーター',
+    tsu_sheet_tag_33: '肉球グローブ',
+    tsu_sheet_tag_34: '肉球ブーツ',
+
+    ste_sheet_tag_11: 'フード',
+    ste_sheet_tag_12: 'チェーン',
+    ste_sheet_tag_13: '指なし手袋',
+    ste_sheet_tag_14: 'ボクシンググローブ',
+    ste_sheet_tag_15: 'キックボクシング',
 
     bms_loading:   '読み込み中...',
     bms_error:     'データを読み込めません 🥲',
