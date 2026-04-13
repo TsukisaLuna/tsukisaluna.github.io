@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="bmstable" content="./src/head.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>月作くんでより</title>
+  <link href="./css/main.css" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-layer" id="bg-layer"></div>
+
+<nav>
+  <div class="nav-logo">
+    🌙月作くんでより
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="switchPage('home', this)">
+      <span class="tab-icon">🏠</span>
+      <span class="tab-text">Main</span>
+    </button>
+    <button class="nav-tab" onclick="switchPage('chars', this)">
+      <span class="tab-icon">🎨</span>
+      <span class="tab-text">Sheets</span>
+    </button>
+    <button class="nav-tab" onclick="switchPage('bms', this)">
+      <span class="tab-icon">🎹</span>
+      <span class="tab-text">BMS</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <div class="home-wrap">
+    <div class="profile-card">
+      <div class="card-band"></div>
+
+      <div class="avatar-area">
+        <div class="avatar-circle">
+          <img src="assets/profile/sisito_tsu.png" alt="츠키사">
+        </div>
+        <div>
+          <div class="name-kr">츠키사</div>
+          <div class="name-en">TsukisaLuna</div>
+          <div class="quote-bubble">츠키사군 귀여워해주세요 :)</div>
+        </div>
+      </div>
+
+      <div class="cute-divider"></div>
+
+      <div class="info-row">
+        <div class="info-icon">🛠️</div>
+        <div>
+          <div class="info-label">Work</div>
+          <div class="tag-row">
+            <span class="tag">Web</span>
+            <span class="tag">H/W</span>
+            <span class="tag">BMS Patterner</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-icon">🎮</div>
+        <div>
+          <div class="info-label">Playing Game</div>
+          <div class="tag-row">
+            <span class="tag">Rhythm Game</span>
+            <span class="tag">Trickcal:Revive (KR/JP)</span>
+            <span class="tag">EndField</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-icon">💬</div>
+        <div>
+          <div class="info-label">Contect</div>
+          <a class="link-tag" href="https://x.com/TsukisaLuna" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.263 5.632 5.9-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            @TsukisaLuna
+          </a>
+          <a class="link-tag" href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+            tsukisaluna
+          </a>
+        </div>
+      </div>
+
+      <div class="card-deco">
+        <div class="deco-dot" style="background:var(--main)"></div>
+        <div class="deco-dot" style="background:var(--main-light)"></div>
+        <div class="deco-dot" style="background:var(--main-pale)"></div>
+        <div class="deco-dot" style="background:var(--accent)"></div>
+        <div class="deco-dot" style="background:var(--accent2)"></div>
+        <div class="deco-dot" style="background:var(--main-pale)"></div>
+        <div class="deco-dot" style="background:var(--main-light)"></div>
+        <div class="deco-dot" style="background:var(--main)"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHARACTERS -->
+<div class="page" id="page-chars">
+  <div class="chars-wrap">
+    <div class="page-title">
+      <div class="title-icon">🎨</div>
+      Character Sheets
+    </div>
+
+    <!-- 츠키사 -->
+    <div class="char-section">
+      <div class="char-header">
+        <div class="char-ava blue">
+          <img src="assets/profile/sisito_tsubox.png" alt="츠키사">
+        </div>
+        <div>
+          <div class="char-name">Tsukisa Luna (月作くん)</div>
+          <div class="char-sub">언제나 밝고 긍정적인<br>호기심 많은 늑대 소년</div>
+          <div class="char-header-tags">
+            <span class="sheet-tag">wolf ears</span>
+            <span class="sheet-tag">wolf tails</span>
+            <span class="sheet-tag">White hair + blue eyes</span>
+            <span class="sheet-tag">little fang</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sheet-grid grid-3" style="margin-bottom:1.2rem">
+        <div class="sheet-card" onclick="openLb(['assets/sheets/tsu_default.jpg'], 'Tsukisa', 'Summer ver. (default)')">
+          <div class="sheet-img-wrap ratio-4-3">
+            <img class="sheet-img" src="assets/thumb/tsu_default.jpg" alt="기본 복장">
+          </div>
+          <div class="sheet-label">
+            <div class="label-dot"></div>
+            <div>
+              <div class="sheet-ver">Tsukisa</div>
+              <div class="sheet-name">Summer ver. (default)</div>
+            </div>
+          </div>
+          <div class="sheet-tags">
+            <span class="sheet-tag">sailer</span>
+            <span class="sheet-tag">gloves</span>
+            <span class="sheet-tag">barefoot</span>
+          </div>
+        </div>
+
+        <div class="sheet-card" onclick="openLb(['assets/sheets/tsu_boxing1.jpg','assets/sheets/tsu_boxing2.jpg'], 'Tsukisa', 'Fighter ver.')">
+          <div class="sheet-img-wrap ratio-4-3">
+            <img class="sheet-img" src="assets/thumb/tsu_boxing.jpg" alt="격투가 버전">
+          </div>
+          <div class="sheet-label">
+            <div class="label-dot"></div>
+            <div>
+              <div class="sheet-ver">Tsukisa</div>
+              <div class="sheet-name">Fighter ver.</div>
+            </div>
+            <span class="sheet-r18">R18(G) OK</span>
+          </div>
+          <div class="sheet-tags">
+            <span class="sheet-tag">hoodie</span>
+            <span class="sheet-tag">boxing gloves</span>
+            <span class="sheet-tag">kickboxing</span>
+          </div>
+        </div>
+
+        <div class="sheet-card" onclick="openLb(['assets/sheets/tsu_winter.jpg'], 'Tsukisa', 'Kemono fit Winter ver.')">
+          <div class="sheet-img-wrap ratio-4-3">
+            <img class="sheet-img" src="assets/thumb/tsu_winter.jpg" alt="겨울 버전">
+          </div>
+          <div class="sheet-label">
+            <div class="label-dot"></div>
+            <div>
+              <div class="sheet-ver">Tsukisa</div>
+              <div class="sheet-name">Kemono fit Winter ver.</div>
+            </div>
+          </div>
+          <div class="sheet-tags">
+            <span class="sheet-tag">cape</span>
+            <span class="sheet-tag">sweater</span>
+            <span class="sheet-tag">paw gloves</span>
+            <span class="sheet-tag">paw boots</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 스텔라 -->
+    <div class="char-section">
+      <div class="char-header">
+        <div class="char-ava red">
+          <img src="assets/profile/sisito_stebox.png" alt="스텔라">
+        </div>
+        <div>
+          <div class="char-name red">Stella Maris (ステラ)</div>
+          <div class="char-sub">장난을 매우 좋아하는<br>사고뭉치 롭이어토끼 소년</div>
+          <div class="char-header-tags">
+            <span class="sheet-tag red">lop ears</span>
+            <span class="sheet-tag red">rabbit tails</span>
+            <span class="sheet-tag red">White hair + red eyes</span>
+            <span class="sheet-tag red">Star-shaped Iris (Right Eye only)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sheet-grid grid-3" style="margin-bottom:1.2rem">
+        <div class="sheet-card" onclick="openLb(['assets/sheets/ste_default.jpg'],'Stella','Fighter ver. (default)')">
+          <div class="sheet-img-wrap ratio-4-3">
+            <img class="sheet-img" src="assets/thumb/ste_default.jpg" alt="스텔라 시트" style="object-position:center">
+          </div>
+          <div class="sheet-label">
+            <div class="label-dot red"></div>
+            <div>
+              <div class="sheet-ver">Stella</div>
+              <div class="sheet-name">Fighter ver. (default)</div>
+            </div>
+            <span class="sheet-r18">R18(G) OK</span>
+          </div>
+          <div class="sheet-tags">
+            <span class="sheet-tag red">hoodie</span>
+            <span class="sheet-tag red">chain</span>
+            <span class="sheet-tag red">fingerless gloves</span>
+            <span class="sheet-tag red">boxing gloves</span>
+            <span class="sheet-tag red">kickboxing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BMS PAGE -->
+<div class="page" id="page-bms">
+  <div class="bms-wrap">
+
+    <div class="page-title">
+      <div class="title-icon">🎹</div>
+      BMS
+    </div>
+
+    <div class="bms-table-wrap">
+      <table class="bms-table">
+        <thead>
+          <tr>
+            <th>Lv</th>
+            <th>Title</th>
+            <th>ChartView</th>
+            <th class="col-total">Total</th>
+            <th class="col-notes">Notes</th>
+            <th class="col-tpn">tpn</th>
+            <th class="col-ir">IR</th>
+            <th class="col-dl">DL</th>
+          </tr>
+        </thead>
+        <tbody id="bms-tbody">
+          <tr><td colspan="8" class="bms-empty">로딩 중...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLb()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <div class="lb-close" onclick="closeLb()">✕</div>
+    <img id="lb-img" src="" alt="">
+    <div class="lb-bottom">
+      <button class="lb-nav" id="lb-prev" onclick="lbPrev()">‹</button>
+      <span class="lb-counter" id="lb-counter"></span>
+      <button class="lb-nav" id="lb-next" onclick="lbNext()">›</button>
+    </div>
+    <div class="lb-desc" id="lb-desc">
+      <div class="lb-desc-title" id="lb-desc-title"></div>
+      <div class="lb-desc-text" id="lb-desc-text"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const pageOrder = ['home', 'chars', 'bms'];
+
+  function switchPage(id, btn) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo(0, 0);
+
+    // 홈일 때만 배경 표시
+    const bg = document.getElementById('bg-layer');
+    if (id === 'home') {
+      bg.classList.add('visible');
+    } else {
+      bg.classList.remove('visible');
+    }
+  }
+
+  // Scroll
+  function getActivePageId() {
+    return document.querySelector('.page.active').id.replace('page-', '');
+  }
+
+  function swipeTo(direction) {
+    const current = getActivePageId();
+    const idx = pageOrder.indexOf(current);
+    const nextIdx = direction === 'left' ? idx + 1 : idx - 1;
+    if (nextIdx < 0 || nextIdx >= pageOrder.length) return;
+    const btn = document.querySelectorAll('.nav-tab')[nextIdx];
+    switchPage(pageOrder[nextIdx], btn);
+  }
+
+  let startX = 0;
+  let startY = 0;
+
+  const isTouchDevice = () => window.matchMedia('(pointer: coarse)').matches;
+
+  document.addEventListener('pointerdown', e => {
+    if (isTouchDevice()) return;
+    startX = e.clientX;
+    startY = e.clientY;
+  });
+
+  document.addEventListener('pointerup', e => {
+    if (isTouchDevice()) return;
+    if (document.getElementById('lightbox').classList.contains('open')) return;
+
+    const selection = window.getSelection();
+    if (selection && selection.toString().length > 0) return;
+
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy)) return;
+    swipeTo(dx < 0 ? 'left' : 'right');
+  });
+
+  document.addEventListener('touchstart', e => {
+    if (!isTouchDevice()) return;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+
+  document.addEventListener('touchend', e => {
+    if (!isTouchDevice()) return;
+    if (document.getElementById('lightbox').classList.contains('open')) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy)) return;
+    swipeTo(dx < 0 ? 'left' : 'right');
+  }, { passive: true });
+
+
+
+  /* light box */
+  let lbImages = [];
+  let lbIndex  = 0;
+
+  function openLb(imgs, ver, name, desc) {
+  lbImages = Array.isArray(imgs) ? imgs : [imgs];
+  lbIndex  = 0;
+  updateLb();
+
+  // 설명 업데이트
+  const descBox   = document.getElementById('lb-desc');
+  const descTitle = document.getElementById('lb-desc-title');
+  const descText  = document.getElementById('lb-desc-text');
+
+  if (name || desc) {
+    descTitle.textContent = (ver ? ver + ' · ' : '') + (name ?? '');
+    descText.textContent  = desc ?? '';
+    descBox.style.display = 'block';
+  } else {
+    descBox.style.display = 'none';
+  }
+
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function updateLb() {
+    document.getElementById('lb-img').src = lbImages[lbIndex];
+    document.getElementById('lb-counter').textContent =
+      lbImages.length > 1 ? `${lbIndex + 1} / ${lbImages.length}` : '';
+    document.getElementById('lb-prev').style.display = lbImages.length > 1 ? 'flex' : 'none';
+    document.getElementById('lb-next').style.display = lbImages.length > 1 ? 'flex' : 'none';
+  }
+
+  function lbPrev() { lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length; updateLb(); }
+  function lbNext() { lbIndex = (lbIndex + 1) % lbImages.length; updateLb(); }
+
+  function closeLb() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft')  lbPrev();
+    if (e.key === 'ArrowRight') lbNext();
+  });
+
+
+
+
+
+
+  /* BMS JSON 로드 & 렌더 */
+  async function loadBMS() {
+    try {
+      const res  = await fetch('./src/data.json');
+      const data = await res.json();
+      renderBMS(data);
+    } catch (e) {
+      document.getElementById('bms-tbody').innerHTML =
+        '<tr><td colspan="8" class="bms-empty">데이터를 불러올 수 없어요 🥲</td></tr>';
+    }
+  }
+
+  function renderBMS(data) {
+    const tbody = document.getElementById('bms-tbody');
+
+    if (!data.length) {
+      tbody.innerHTML = '<tr><td colspan="8" class="bms-empty">데이터가 없어요</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = data.map(song => {
+      /* ── 여기서 JSON 키를 맞춰주세요 ── */
+      const md5      = song.md5.toLowerCase()  ?? '';
+      const sha256   = song.sha256.toLowerCase()  ?? '';
+      const level    = song.level   ?? '';
+      const title    = song.title   ?? '';
+      const dl_title = song.dl_title   ?? '';
+      const total    = song.Total     ?? '';
+      const notes    = song['Total Notes'] ?? '';
+      const tpn      = (notes && total) ? (parseFloat(total) / parseFloat(notes)).toFixed(2) : '';
+      const youtube  = song.youtube   ?? '';
+      /* ────────────────────────────── */
+
+      const youtubeBtn = youtube
+        ? `<a class="bms-btn play" href="https://youtu.be/${youtube}" target="_blank">📺</a>`
+        : `<span class="bms-btn disabled">📺</span>`;
+
+      const scviewBtn = md5
+        ? `<a class="bms-btn play" href="https://bms-score-viewer.pages.dev/view?md5=${md5}" target="_blank">📄</a>`
+        : `<span class="bms-btn disabled">📄</span>`;
+
+      const mirBtn = sha256
+        ? `<a class="bms-btn ir" href="https://www.gaftalk.com/minir/#/viewer/song/${sha256}/0" target="_blank">MinIR</a>`
+        : '';
+
+      const lr2Btn = md5
+        ? `<a class="bms-btn ir" href="http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=${md5}" target="_blank">LR2IR</a>`
+        : '';
+
+      const dlBtn = dl_title
+        ? `<a class="bms-btn dl" href="https://tsukisa.info/sabun/${dl_title}.zip" target="_blank">DL</a>`
+        : `<span class="bms-btn disabled">DL</span>`;
+
+      return `
+        <tr>
+          <td class="bms-level">🌙${level}</td>
+          <td class="bms-title">${title}</td>
+          <td class="center"><div class="bms-links">${youtubeBtn}${scviewBtn}</td>
+          <td class="bms-num center col-total">${total}</td>
+          <td class="bms-num center col-notes">${notes}</td>
+          <td class="bms-tpn center col-tpn">${tpn}</td>
+          <td class="center col-ir"><div class="bms-links">${mirBtn}${lr2Btn}</div></td>
+          <td class="center col-dl">${dlBtn}</td>
+        </tr>`;
+    }).join('');
+  }
+
+  /* 페이지 첫 진입 시 한 번만 로드 */
+  let bmsLoaded = false;
+  const origSwitch = switchPage;
+  switchPage = function(id, btn) {
+    origSwitch(id, btn);
+    if (id === 'bms' && !bmsLoaded) {
+      bmsLoaded = true;
+      loadBMS();
+    }
+  };
+
+  if (document.querySelector('.page.active').id === 'page-home') {
+    document.getElementById('bg-layer').classList.add('visible');
+  }
+</script>
+</body>
+</html>
