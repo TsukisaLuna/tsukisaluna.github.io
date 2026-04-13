@@ -393,6 +393,8 @@
     font-size: 20px;
     color: var(--main);
     line-height: 1.2;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 900;
   }
 
   .char-name.red { color: #e05a5a; }
