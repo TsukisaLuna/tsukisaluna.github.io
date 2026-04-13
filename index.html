@@ -109,7 +109,7 @@
   <div class="chars-wrap">
     <div class="page-title">
       <div class="title-icon">🎨</div>
-      캐릭터 리스트
+      Character Sheets
     </div>
 
     <!-- 츠키사 -->
@@ -119,13 +119,13 @@
           <img src="assets/profile/sisito_tsubox.png" alt="츠키사">
         </div>
         <div>
-          <div class="char-name">Tsukisa Luna (츠키사)</div>
+          <div class="char-name">Tsukisa Luna (츠키사 / 月作くん)</div>
           <div class="char-sub">언제나 밝고 긍정적인<br>호기심 많은 늑대 소년</div>
         </div>
       </div>
 
       <div class="sheet-grid grid-3" style="margin-bottom:1.2rem">
-        <div class="sheet-card" onclick="openLb('assets/sheets/tsu_default.jpg')">
+        <div class="sheet-card" onclick="openLb(['assets/sheets/tsu_default.jpg'], 'Tsukisa', 'Summer ver. (default)')">
           <div class="sheet-img-wrap ratio-4-3">
             <img class="sheet-img" src="assets/thumb/tsu_default.jpg" alt="기본 복장">
           </div>
@@ -136,9 +136,14 @@
               <div class="sheet-name">Summer ver. (default)</div>
             </div>
           </div>
+          <div class="sheet-tags">
+            <span class="sheet-tag">sailer</span>
+            <span class="sheet-tag">gloves</span>
+            <span class="sheet-tag">barefoot</span>
+          </div>
         </div>
 
-        <div class="sheet-card" onclick="openLb(['assets/sheets/tsu_boxing1.jpg','assets/sheets/tsu_boxing2.jpg'])">
+        <div class="sheet-card" onclick="openLb(['assets/sheets/tsu_boxing1.jpg','assets/sheets/tsu_boxing2.jpg'], 'Tsukisa', 'Fighter ver.')">
           <div class="sheet-img-wrap ratio-4-3">
             <img class="sheet-img" src="assets/thumb/tsu_boxing.jpg" alt="격투가 버전">
           </div>
@@ -149,9 +154,15 @@
               <div class="sheet-name">Fighter ver.</div>
             </div>
           </div>
+          <div class="sheet-tags">
+            <span class="sheet-tag">hoodie</span>
+            <span class="sheet-tag">boxing gloves</span>
+            <span class="sheet-tag">kickboxing equipments</span>
+            <span class="sheet-tag sheet-tag-r18">R18(G) OK</span>
+          </div>
         </div>
 
-        <div class="sheet-card" onclick="openLb('assets/sheets/tsu_winter.jpg')">
+        <div class="sheet-card" onclick="openLb(['assets/sheets/tsu_winter.jpg'], 'Tsukisa', 'Kemono fit Winter ver.')">
           <div class="sheet-img-wrap ratio-4-3">
             <img class="sheet-img" src="assets/thumb/tsu_winter.jpg" alt="겨울 버전">
           </div>
@@ -163,6 +174,11 @@
             </div>
           </div>
         </div>
+        <div class="sheet-tags">
+          <span class="sheet-tag">cape</span>
+          <span class="sheet-tag">paw gloves</span>
+          <span class="sheet-tag">paw boots</span>
+        </div>
       </div>
     </div>
 
@@ -173,13 +189,13 @@
           <img src="assets/profile/sisito_stebox.png" alt="스텔라">
         </div>
         <div>
-          <div class="char-name red">Stella Maris (스텔라)</div>
+          <div class="char-name red">Stella Maris (스텔라 / ステラ)</div>
           <div class="char-sub">장난을 매우 좋아하는<br>사고뭉치 롭이어토끼 소년</div>
         </div>
       </div>
 
       <div class="sheet-grid grid-3" style="margin-bottom:1.2rem">
-        <div class="sheet-card" onclick="openLb('assets/sheets/ste_default.jpg')">
+        <div class="sheet-card" onclick="openLb(['assets/sheets/ste_default.jpg'],'Stella','Fighter ver. (default)')">
           <div class="sheet-img-wrap ratio-4-3">
             <img class="sheet-img" src="assets/thumb/ste_default.jpg" alt="스텔라 시트" style="object-position:center">
           </div>
@@ -190,6 +206,12 @@
               <div class="sheet-name">Fighter ver. (default)</div>
             </div>
           </div>
+        </div>
+        <div class="sheet-tags">
+          <span class="sheet-tag">hoodie</span>
+          <span class="sheet-tag">boxing gloves</span>
+          <span class="sheet-tag">kickboxing equipments</span>
+          <span class="sheet-tag sheet-tag-r18">R18(G) OK</span>
         </div>
       </div>
     </div>
@@ -238,6 +260,10 @@
       <button class="lb-nav" id="lb-prev" onclick="lbPrev()">‹</button>
       <span class="lb-counter" id="lb-counter"></span>
       <button class="lb-nav" id="lb-next" onclick="lbNext()">›</button>
+    </div>
+    <div class="lb-desc" id="lb-desc">
+      <div class="lb-desc-title" id="lb-desc-title"></div>
+      <div class="lb-desc-text" id="lb-desc-text"></div>
     </div>
   </div>
 </div>
@@ -314,14 +340,30 @@
     swipeTo(dx < 0 ? 'left' : 'right');
   }, { passive: true });
 
+
+
   /* light box */
   let lbImages = [];
   let lbIndex  = 0;
 
-  function openLb(imgs) {
-    lbImages = Array.isArray(imgs) ? imgs : [imgs];
-    lbIndex  = 0;
-    updateLb();
+  function openLb(imgs, ver, name, desc) {
+  lbImages = Array.isArray(imgs) ? imgs : [imgs];
+  lbIndex  = 0;
+  updateLb();
+
+  // 설명 업데이트
+  const descBox   = document.getElementById('lb-desc');
+  const descTitle = document.getElementById('lb-desc-title');
+  const descText  = document.getElementById('lb-desc-text');
+
+  if (name || desc) {
+    descTitle.textContent = (ver ? ver + ' · ' : '') + (name ?? '');
+    descText.textContent  = desc ?? '';
+    descBox.style.display = 'block';
+  } else {
+    descBox.style.display = 'none';
+  }
+
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
