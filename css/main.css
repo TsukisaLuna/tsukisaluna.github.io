@@ -481,7 +481,7 @@
     background: pink;
     border: 1.5px solid pink;
     color: red;
-    font-weight: 700;
+    font-family: 'Noto Sans KR', sans-serif;
     white-space: nowrap;
   }
 
