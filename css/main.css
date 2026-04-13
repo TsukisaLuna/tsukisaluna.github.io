@@ -384,7 +384,7 @@
   }
 
   .char-ava.blue { background: var(--main-pale); }
-  .char-ava.red  { background: var(--stella-rednm); }
+  .char-ava.red  { background: var(--stella-redbg); }
 
   
   .char-ava img {
@@ -504,7 +504,7 @@
     padding: 2px 10px;
     border-radius: 999px;
     background: var(--stella-redtgbg);
-    border: 5px solid var(--stella-redtgbg);
+    border: 1px solid var(--stella-redtgbg);
     color: var(--stella-redtg);
     font-family: 'Noto Sans KR', sans-serif;
   }
