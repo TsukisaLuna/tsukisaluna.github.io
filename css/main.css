@@ -112,7 +112,7 @@ nav {
 }
 
 .nav-logo {
-    font-family: var(--font-zen);
+    font-family: var(--font-base);
     font-weight: var(--font-weight-extra);
     font-size: 18px;
     color: var(--main);
@@ -124,7 +124,7 @@ nav {
 .nav-tabs { display: flex; gap: 8px; }
 
 .nav-tab {
-    font-family: var(--font-zen);
+    font-family: var(--font-base);
     font-weight: var(--font-weight-extra);
     font-size: 14px;
     color: var(--text-dim);
