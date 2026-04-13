@@ -233,10 +233,12 @@
 <div class="lightbox" id="lightbox" onclick="closeLb()">
   <div class="lightbox-inner" onclick="event.stopPropagation()">
     <div class="lb-close" onclick="closeLb()">✕</div>
-    <button class="lb-nav" id="lb-prev" onclick="lbPrev()">‹</button>
     <img id="lb-img" src="" alt="">
-    <button class="lb-nav" id="lb-next" onclick="lbNext()">›</button>
-    <div class="lb-counter" id="lb-counter"></div>
+    <div class="lb-bottom">
+      <button class="lb-nav" id="lb-prev" onclick="lbPrev()">‹</button>
+      <span class="lb-counter" id="lb-counter"></span>
+      <button class="lb-nav" id="lb-next" onclick="lbNext()">›</button>
+    </div>
   </div>
 </div>
 
@@ -287,6 +289,10 @@
   document.addEventListener('pointerup', e => {
     if (isTouchDevice()) return;
     if (document.getElementById('lightbox').classList.contains('open')) return;
+
+    const selection = window.getSelection();
+    if (selection && selection.toString().length > 0) return;
+
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
     if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy)) return;
@@ -341,6 +347,11 @@
     if (e.key === 'ArrowLeft')  lbPrev();
     if (e.key === 'ArrowRight') lbNext();
   });
+
+
+
+
+
 
   /* BMS JSON 로드 & 렌더 */
   async function loadBMS() {
