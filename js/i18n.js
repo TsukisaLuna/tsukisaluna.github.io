@@ -1,20 +1,5 @@
 const i18n = {
-  en: {
-    nav_main:      'Main',
-    nav_sheets:    'Sheets',
-    page_sheets:   'Character Sheets',
-    profile_name:  'Tsukisa',
-    profile_quote: 'Please take care of Tsukisa :)',
-    label_work:    'Work',
-    label_game:    'Playing Game',
-    label_contact: 'Contact',
-    tag_rhythm:    'Rhythm Game',
-    tsu_desc:      'Always bright and positive,<br>a curious wolf boy',
-    ste_desc:      'A mischievous troublemaker<br>lop-ear rabbit boy who loves fighting',
-    bms_loading:   'Loading...',
-    bms_error:     'Failed to load data 🥲',
-    bms_empty:     'No data',
-  },
+
   ko: {
     nav_main:      '메인',
     nav_sheets:    '시트',
@@ -31,12 +16,30 @@ const i18n = {
     bms_error:     '데이터를 불러올 수 없어요 🥲',
     bms_empty:     '데이터가 없어요',
   },
+
+  en: {
+    nav_main:      'Main',
+    nav_sheets:    'Sheets',
+    page_sheets:   'Character Sheets',
+    profile_name:  'Tsukisa',
+    profile_quote: 'Please take care of Tsukisa :)',
+    label_work:    'Work',
+    label_game:    'Playing Game',
+    label_contact: 'Contact',
+    tag_rhythm:    'Rhythm Game',
+    tsu_desc:      'Always bright and positive,<br>a curious wolf boy',
+    ste_desc:      'A mischievous troublemaker<br>lop-ear rabbit boy who loves fighting',
+    bms_loading:   'Loading...',
+    bms_error:     'Failed to load data 🥲',
+    bms_empty:     'No data',
+  },
+
   ja: {
     nav_main:      'メイン',
     nav_sheets:    'シート',
     page_sheets:   'キャラクターシート',
-    profile_name:  'ツキサ',
-    profile_quote: 'ツキサくんを可愛がってください :)',
+    profile_name:  '月作',
+    profile_quote: '月作くんを可愛がってください :)',
     label_work:    'お仕事',
     label_game:    'プレイ中',
     label_contact: '連絡先',
@@ -49,16 +52,16 @@ const i18n = {
   }
 };
 
-const langOrder = ['en', 'ko', 'ja'];
-const langLabel = { en: 'EN', ko: 'KO', ja: 'JP' };
+const langOrder = ['ko', 'en', 'ja'];
+const langLabel = { ko: 'KO', en: 'EN', ja: 'JP' };
 
 let currentLang = localStorage.getItem('lang') || detectLang();
 
 function detectLang() {
   const l = navigator.language;
-  if (l.startsWith('ko')) return 'ko';
+  if (l.startsWith('en')) return 'en';
   if (l.startsWith('ja')) return 'ja';
-  return 'en';
+  return 'ko';
 }
 
 function applyLang() {
@@ -69,7 +72,10 @@ function applyLang() {
   });
   document.documentElement.lang = currentLang;
 
-  // 버튼에 다음 언어 표시
+  // 언어별 클래스 교체
+  document.documentElement.classList.remove('lang-en', 'lang-ko', 'lang-ja');
+  document.documentElement.classList.add('lang-' + currentLang);
+
   const nextLang = langOrder[(langOrder.indexOf(currentLang) + 1) % langOrder.length];
   const langBtn = document.getElementById('lang-text');
   if (langBtn) langBtn.textContent = langLabel[nextLang];

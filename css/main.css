@@ -22,6 +22,11 @@
     --stella-redtgbg: #fde8e8;
   }
 
+  /* JP 전용 폰트 */
+  :root.lang-ja body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+  }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
