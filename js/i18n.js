@@ -71,14 +71,11 @@ function applyLang() {
     if (t[key] !== undefined) el.innerHTML = t[key];
   });
   document.documentElement.lang = currentLang;
-
-  // 언어별 클래스 교체
-  document.documentElement.classList.remove('lang-ko', 'lang-en', 'lang-ja');
+  document.documentElement.classList.remove('lang-en', 'lang-ko', 'lang-ja');
   document.documentElement.classList.add('lang-' + currentLang);
 
-  const nextLang = langOrder[(langOrder.indexOf(currentLang) + 1) % langOrder.length];
   const langBtn = document.getElementById('lang-text');
-  if (langBtn) langBtn.textContent = langLabel[nextLang];
+  if (langBtn) langBtn.textContent = langLabel[currentLang];
 }
 
 function toggleLang() {
