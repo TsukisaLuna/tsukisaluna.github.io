@@ -24,11 +24,18 @@
     --font-pop: 'OneStoreMobilePop', sans-serif;
     --font-zen: 'Zen Maru Gothic', sans-serif;
     --font-base: var(--font-pop); /* 기본 폰트 변수 */
+    --font-weight-base: 400;
+    --font-weight-bold: 400;
+    --font-weight-extra: 400;
+
 }
 
 /* ── 언어별 폰트 변수 교체 ── */
 :root.lang-ja {
     --font-base: var(--font-zen);
+    --font-weight-base: 500;
+    --font-weight-bold: 700;
+    --font-weight-extra: 900;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -37,6 +44,7 @@ body {
     background: var(--bg);
     color: var(--text);
     font-family: var(--font-base);
+    font-weight: var(--font-weight-base);
     min-height: 100vh;
     overflow-x: hidden;
     animation: fadeIn 0.6s ease both;
@@ -105,6 +113,7 @@ nav {
 
 .nav-logo {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-extra);
     font-size: 18px;
     color: var(--main);
     display: flex;
@@ -116,6 +125,7 @@ nav {
 
 .nav-tab {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-bold);
     font-size: 14px;
     color: var(--text-dim);
     padding: 7px 20px;
@@ -208,8 +218,9 @@ nav {
     transform: scale(1.15);
 }
 
-.name-kr {
+.name {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-extra);
     font-size: 28px;
     color: var(--main);
     line-height: 1;
@@ -217,6 +228,8 @@ nav {
 }
 
 .name-en {
+    font-family: var(--font-base);
+    font-weight: var(--font-weight-blod);
     font-size: 13px;
     color: var(--text-dim);
     letter-spacing: 0.08em;
@@ -226,6 +239,7 @@ nav {
 .quote-bubble {
     display: inline-block;
     font-family: var(--font-base);
+    font-weight: var(--font-weight-base);
     background: var(--main-paler);
     border: 1.5px solid var(--main-pale);
     border-radius: 999px;
@@ -274,6 +288,7 @@ nav {
 
 .info-label {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-extra);
     font-size: 11px;
     color: var(--text-dim);
     margin-bottom: 4px;
@@ -284,6 +299,7 @@ nav {
 .tag {
     display: inline-block;
     font-family: var(--font-base);
+    font-weight: var(--font-weight-base);
     background: var(--main-paler);
     border: 1.5px solid var(--main-pale);
     border-radius: 999px;
@@ -307,6 +323,7 @@ nav {
     padding: 7px 20px;
     margin-bottom: 4px;
     font-family: var(--font-base);
+    font-weight: var(--font-weight-base);
     font-size: 14px;
     color: #fff;
     text-decoration: none;
@@ -341,6 +358,7 @@ nav {
 
 .page-title {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-extra);
     font-size: 22px;
     color: var(--main);
     margin-bottom: 2.5rem;
@@ -402,6 +420,7 @@ nav {
 
 .char-name {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-extra);
     font-size: 20px;
     color: var(--main);
     line-height: 1.2;
@@ -416,6 +435,7 @@ nav {
 
 .char-sub {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-bold);
     font-size: 12px;
     color: var(--text-dim);
     margin-top: 3px;
@@ -479,12 +499,14 @@ nav {
 
 .sheet-ver {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-extra);
     font-size: 11px;
     color: var(--text-dim);
 }
 
 .sheet-name {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-extra);
     font-size: 14px;
     color: var(--text);
 }
@@ -492,6 +514,7 @@ nav {
 .sheet-r18 {
     margin-left: auto;
     font-family: var(--font-base);
+    font-weight: var(--font-weight-base);
     font-size: 11px;
     padding: 2px 10px;
     border-radius: 999px;
@@ -510,6 +533,7 @@ nav {
 
 .sheet-tag {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-base);
     font-size: 11px;
     padding: 2px 10px;
     border-radius: 999px;
@@ -589,6 +613,7 @@ nav {
 
 .lb-desc-title {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-extra);
     font-size: 13px;
     color: rgba(255,255,255,0.6);
     margin-bottom: 4px;
@@ -596,6 +621,7 @@ nav {
 
 .lb-desc-text {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-bold);
     font-size: 14px;
     color: #fff;
     line-height: 1.6;
@@ -603,6 +629,7 @@ nav {
 
 .lb-counter {
     font-family: var(--font-base);
+    font-weight: var(--font-weight-extra);
     color: rgba(255,255,255,0.8);
     font-size: 13px;
     min-width: 40px;
