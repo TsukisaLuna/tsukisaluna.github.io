@@ -480,9 +480,9 @@
     font-size: 11px;
     padding: 2px 10px;
     border-radius: 999px;
-    background: pink;
-    border: 1.5px solid pink;
-    color: red;
+    background: #f9a8a8;
+    border: 1.5px solid var(--red);
+    color: var(--red);
     font-family: 'Noto Sans KR', sans-serif;
     white-space: nowrap;
   }
@@ -501,6 +501,16 @@
     background: var(--main-paler);
     border: 1px solid var(--main-pale);
     color: var(--main);
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  .sheet-tag.red {
+    font-size: 11px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #f9a8a8;
+    border: 1px solid var(--red);
+    color: var(--red);
     font-family: 'Noto Sans KR', sans-serif;
   }
   
