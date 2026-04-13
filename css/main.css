@@ -473,6 +473,18 @@
     color: var(--text);
   }
 
+  .sheet-r18 {
+    margin-left: auto;
+    font-size: 11px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: pink;
+    border: 1.5px solid pink;
+    color: red;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
   .sheet-tags {
     display: flex;
     flex-wrap: wrap;
@@ -488,12 +500,6 @@
     border: 1px solid var(--main-pale);
     color: var(--main);
     font-family: 'Noto Sans KR', sans-serif;
-  }
-
-  .sheet-tag-r18 {
-    background: pink;
-    border: 1px solid pink;
-    color: red;
   }
   
 
