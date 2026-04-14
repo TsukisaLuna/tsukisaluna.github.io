@@ -212,3 +212,7 @@ function toggleLang() {
   localStorage.setItem('lang', currentLang);
   applyLang();
 }
+
+function t(key) {
+  return i18n[currentLang][key] ?? key;
+}
