@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="bmstable" content="./src/head.json">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <title>🌙</title>
   <link href="./css/main.css" rel="stylesheet">
 </head>
@@ -27,7 +28,7 @@
       </button>
       <button class="nav-tab lang-btn" onclick="toggleLang()">
         <span class="tab-icon">🌐</span>
-        <span class="tab-text" id="lang-text">EN</span>
+        <span class="tab-text" id="lang-text">KO</span>
       </button>
     </div>
   </nav>
@@ -68,9 +69,9 @@
           <div>
             <div class="info-label" data-i18n="label_game">Playing</div>
             <div class="tag-row">
-              <span class="tag" data-i18n="tag_game1">Rhythm Game</span>
-              <span class="tag" data-i18n="tag_game2">Trickcal:Revive (KR/JP)</span>
-              <span class="tag" data-i18n="tag_game3">EndField</span>
+              <span class="tag" data-i18n="tag_game1">리듬게임</span>
+              <span class="tag" data-i18n="tag_game2">트릭컬:리바이브 (KR/JP)</span>
+              <span class="tag" data-i18n="tag_game3">엔드필드</span>
             </div>
           </div>
         </div>
@@ -118,16 +119,15 @@
       <div class="char-section">
         <div class="char-header">
           <div class="char-ava blue">
-            <img src="assets/profile/sisito_tsubox.png" alt="Tsukisa">
+            <img src="./assets/profile/sisito_tsubox.png" alt="Tsukisa">
           </div>
           <div>
-            <div class="char-name" data-i18n="tsu_name">Tsukisa Luna</div>
-            <div class="char-sub" data-i18n="tsu_desc">Always bright and positive,<br>a curious wolf boy</div>
+            <div class="char-name" data-i18n="tsu_name">츠키사 루나　(츠키사군)</div>
+            <div class="char-sub" data-i18n="tsu_desc">언제나 밝고 긍정적인 호기심 많은 늑대 소년</div>
             <div class="char-header-tags">
-              <span class="sheet-tag">wolf ears</span>
-              <span class="sheet-tag">wolf tails</span>
-              <span class="sheet-tag">White hair + blue eyes</span>
-              <span class="sheet-tag">little fang</span>
+              <span class="sheet-tag" data-i18n="tsu_tags1">늑대귀+꼬리</span>
+              <span class="sheet-tag" data-i18n="tsu_tags2">백발벽안</span>
+              <span class="sheet-tag" data-i18n="tsu_tags3">송곳니</span>
             </div>
           </div>
         </div>
@@ -135,7 +135,7 @@
         <div class="sheet-grid grid-3" style="margin-bottom:1.2rem">
           <div class="sheet-card" onclick="openLb(['assets/sheets/tsu_default.jpg'], 'Tsukisa', 'Summer ver. (default)')">
             <div class="sheet-img-wrap ratio-4-3">
-              <img class="sheet-img" src="assets/thumb/tsu_default.jpg" alt="Summer ver.">
+              <img class="sheet-img" src="./assets/thumb/tsu_default.jpg" alt="Summer ver.">
             </div>
             <div class="sheet-label">
               <div class="label-dot"></div>
@@ -153,7 +153,7 @@
 
           <div class="sheet-card" onclick="openLb(['assets/sheets/tsu_boxing1.jpg','assets/sheets/tsu_boxing2.jpg'], 'Tsukisa', 'Fighter ver.')">
             <div class="sheet-img-wrap ratio-4-3">
-              <img class="sheet-img" src="assets/thumb/tsu_boxing.jpg" alt="Fighter ver.">
+              <img class="sheet-img" src="./assets/thumb/tsu_boxing.jpg" alt="Fighter ver.">
             </div>
             <div class="sheet-label">
               <div class="label-dot"></div>
@@ -172,7 +172,7 @@
 
           <div class="sheet-card" onclick="openLb(['assets/sheets/tsu_winter.jpg'], 'Tsukisa', 'Kemono fit Winter ver.')">
             <div class="sheet-img-wrap ratio-4-3">
-              <img class="sheet-img" src="assets/thumb/tsu_winter.jpg" alt="Winter ver.">
+              <img class="sheet-img" src="./assets/thumb/tsu_winter.jpg" alt="Winter ver.">
             </div>
             <div class="sheet-label">
               <div class="label-dot"></div>
@@ -195,16 +195,15 @@
       <div class="char-section">
         <div class="char-header">
           <div class="char-ava red">
-            <img src="assets/profile/sisito_stebox.png" alt="Stella">
+            <img src="./assets/profile/sisito_stebox.png" alt="Stella">
           </div>
           <div>
             <div class="char-name red" data-i18n="ste_name">Stella Maris</div>
             <div class="char-sub" data-i18n="ste_desc">A mischievous troublemaker<br>lop-ear rabbit boy who loves fighting</div>
             <div class="char-header-tags">
-              <span class="sheet-tag red">lop ears</span>
-              <span class="sheet-tag red">rabbit tails</span>
-              <span class="sheet-tag red">White hair + red eyes</span>
-              <span class="sheet-tag red">Star-shaped Iris (Right Eye only)</span>
+              <span class="sheet-tag red" data-i18n="ste_tags1">롭이어 토끼귀+꼬리</span>
+              <span class="sheet-tag red" data-i18n="ste_tags2">백발적안</span>
+              <span class="sheet-tag red" data-i18n="ste_tags3">별모양 오른쪽 눈동자</span>
             </div>
           </div>
         </div>
@@ -212,7 +211,7 @@
         <div class="sheet-grid grid-3" style="margin-bottom:1.2rem">
           <div class="sheet-card" onclick="openLb(['assets/sheets/ste_default.jpg'],'Stella','Fighter ver. (default)')">
             <div class="sheet-img-wrap ratio-4-3">
-              <img class="sheet-img" src="assets/thumb/ste_default.jpg" alt="Stella sheet" style="object-position:center">
+              <img class="sheet-img" src="./assets/thumb/ste_default.jpg" alt="Stella sheet" style="object-position:center">
             </div>
             <div class="sheet-label">
               <div class="label-dot red"></div>
