@@ -41,6 +41,11 @@ const i18n = {
     tsu_sheet3_name: '겨울 ver.',
     ste_sheet1_name: '격투가 ver. (기본)',
 
+    tsu_sheet1_desc: '',
+    tsu_sheet2_desc: '',
+    tsu_sheet3_desc: '',
+    ste_sheet1_desc: '',
+
     // Tags
     tsu_sheet_tag_11: '세라복',
     tsu_sheet_tag_12: '장갑',
@@ -96,6 +101,11 @@ const i18n = {
     tsu_sheet3_name: 'Kemono fit Winter ver.',
     ste_sheet1_name: 'Fighter ver. (default)',
 
+    tsu_sheet1_desc: '',
+    tsu_sheet2_desc: '',
+    tsu_sheet3_desc: '',
+    ste_sheet1_desc: '',
+
     // Tags
     tsu_sheet_tag_11: 'sailer',
     tsu_sheet_tag_12: 'gloves',
@@ -141,12 +151,12 @@ const i18n = {
     ste_desc:      'いたずら好きなトラブルメーカーのロップイヤーうさぎ少年',
 
     // Character Sheets
-    tsu_sheet1: '月作',
+    tsu_sheet1: '月作くん',
     tsu_tags1: '狼耳+しっぽ',
     tsu_tags2: '白髪碧眼',
     tsu_tags3: '八重歯',
 
-    ste_sheet1: 'ステラ',
+    ste_sheet1: 'ステラくん',
     ste_tags1: '兎耳+しっぽ',
     ste_tags2: '白髪赤眼',
     ste_tags3: '星形の瞳(右側)',
@@ -155,6 +165,11 @@ const i18n = {
     tsu_sheet2_name: '格闘技 ver.',
     tsu_sheet3_name: '冬のケモノ ver.',
     ste_sheet1_name: '格闘技 ver. (デフォルト)',
+
+    tsu_sheet1_desc: '',
+    tsu_sheet2_desc: '',
+    tsu_sheet3_desc: '',
+    ste_sheet1_desc: '',
 
     // Tags
     tsu_sheet_tag_11: 'セーラー',
