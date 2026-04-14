@@ -27,12 +27,19 @@ const i18n = {
 
     // Character Sheets
     tsu_sheet1: '츠키사',
+    tsu_tags1: '늑대귀+꼬리',
+    tsu_tags2: '백발벽안',
+    tsu_tags3: '송곳니',
+
     ste_sheet1: '스텔라',
+    ste_tags1: '롭이어 토끼귀+꼬리',
+    ste_tags2: '백발적안',
+    ste_tags3: '별모양 오른쪽 눈동자',
 
     tsu_sheet1_name: '여름 ver. (기본)',
-    tsu_sheet2_name: '파이터 ver.',
+    tsu_sheet2_name: '격투가 ver.',
     tsu_sheet3_name: '겨울 ver.',
-    ste_sheet1_name: '파이터 ver. (기본)',
+    ste_sheet1_name: '격투가 ver. (기본)',
 
     // Tags
     tsu_sheet_tag_11: '세라복',
@@ -43,8 +50,8 @@ const i18n = {
     tsu_sheet_tag_23: '킥복싱',
     tsu_sheet_tag_31: '망토',
     tsu_sheet_tag_32: '스웨터',
-    tsu_sheet_tag_33: '육구 장갑',
-    tsu_sheet_tag_34: '육구 부츠',
+    tsu_sheet_tag_33: '동물장갑',
+    tsu_sheet_tag_34: '동물부츠',
 
     ste_sheet_tag_11: '후드티',
     ste_sheet_tag_12: '체인',
@@ -75,7 +82,14 @@ const i18n = {
 
     // Character Sheets
     tsu_sheet1: 'Tsukisa',
+    tsu_tags1: 'wolf ears + wolf tails',
+    tsu_tags2: 'White hair + blue eyes',
+    tsu_tags3: 'little fang',
+
     ste_sheet1: 'Stella',
+    ste_tags1: 'lop ears + rabbit tails',
+    ste_tags2: 'White hair + red eyes',
+    ste_tags3: 'Star-shaped Iris (Right Eye only)',
 
     tsu_sheet1_name: 'Summer ver. (default)',
     tsu_sheet2_name: 'Fighter ver.',
@@ -128,12 +142,19 @@ const i18n = {
 
     // Character Sheets
     tsu_sheet1: '月作',
-    ste_sheet1: 'ステラ',
+    tsu_tags1: '狼耳+しっぽ',
+    tsu_tags2: '白髪碧眼',
+    tsu_tags3: '八重歯',
 
-    tsu_sheet1_name: 'サマー ver. (デフォルト)',
-    tsu_sheet2_name: 'ファイター ver.',
-    tsu_sheet3_name: 'ケモノフィット ウィンター ver.',
-    ste_sheet1_name: 'ファイター ver. (デフォルト)',
+    ste_sheet1: 'ステラ',
+    ste_tags1: '兎耳+しっぽ',
+    ste_tags2: '白髪赤眼',
+    ste_tags3: '星形の瞳(右側)',
+
+    tsu_sheet1_name: '夏 ver. (デフォルト)',
+    tsu_sheet2_name: '格闘技 ver.',
+    tsu_sheet3_name: '冬のケモノ ver.',
+    ste_sheet1_name: '格闘技 ver. (デフォルト)',
 
     // Tags
     tsu_sheet_tag_11: 'セーラー',
