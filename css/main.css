@@ -656,13 +656,24 @@ nav {
 }
 
 @media (max-width: 560px) {
-    nav { padding: 0 1rem; height: 54px; }
+    nav {
+        padding: 0 0.8rem;
+        height: 50px;
+    }
 
-    .page { padding-top: 54px; }
-    .home-wrap { min-height: calc(100vh - 54px); }
-
+    .nav-logo {
+        font-size: 13px;
+    }
+    
     .tab-text { display: none; }
-    .nav-tab { padding: 6px 10px; font-size: 18px; }
+    
+    .nav-tab {
+        padding: 5px 8px;
+        font-size: 16px;
+    }
+    .page { padding-top: 50px; }
+    .home-wrap { min-height: calc(100vh - 50px); }
+    
     .page-title { display: none; }
 
     .grid-3 { grid-template-columns: 1fr; }

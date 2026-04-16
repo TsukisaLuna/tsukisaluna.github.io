@@ -16,10 +16,10 @@ const i18n = {
     tag_game3:     '명일방주:엔드필드',
 
     tsu_name:      '츠키사 루나　(츠키사군)',
-    tsu_desc:      '언제나 밝고 긍정적인 호기심 많은 늑대 소년',
+    tsu_desc:      '12살 / 1월 20일\n언제나 밝고 긍정적인 호기심 많은 늑대 소년',
 
     ste_name:      '스텔라 마리스　(스텔라군)',
-    ste_desc:      '장난을 매우 좋아하는 사고뭉치 롭이어토끼 소년',
+    ste_desc:      '11살 / 4월 22일\n장난을 매우 좋아하는 사고뭉치 롭이어토끼 소년',
 
     bms_loading:   '로딩 중...',
     bms_error:     '데이터를 불러올 수 없어요 🥲',
@@ -41,10 +41,10 @@ const i18n = {
     tsu_sheet3_name: '겨울 ver.',
     ste_sheet1_name: '격투가 ver. (기본)',
 
-    tsu_sheet1_desc: '여름에는 당연히 세라복이지!\n하지만 분명 더울텐데 장갑을 벗지않는다.',
-    tsu_sheet2_desc: '순한 외모 덕분에 격투기와는 전혀 상관없어보이지만, 우연한 계기로 도전하게 되었다!\n매번 상처투성이가 되어와서.',
-    tsu_sheet3_desc: '퍼리(?)가 되고싶어하는건지 겨울만 되면 춥다고 유독 동물장갑에 집착을 하는 츠키사.\n',
-    ste_sheet1_desc: '자칭 츠키사군의 라이벌(?)\n',
+    tsu_sheet1_desc: '',
+    tsu_sheet2_desc: '순한 외모 덕분에 격투기와는 전혀 상관없어보이지만, 우연한 계기로 격투기에 도전!\n매번 상처투성이가 되어오지만 KO패를 당한적은 없다고 한다.',
+    tsu_sheet3_desc: '추운게 싫어서 온갖 털(?)로 무장했다.\n퍼슈트가 따뜻해 보여서 겨울에는 굳이 퍼리퍼리하게 꾸며서 나온다고...',
+    ste_sheet1_desc: '자칭 츠키사군의 라이벌(?)\n격투기를 매우 좋아해서 평소에도 이렇게 다니는데, 덕분에 주변에서 무슨 사고를 칠지 몰라 경계한다고 한다.',
 
     // Tags
     tsu_sheet_tag_11: '세라복',
@@ -102,9 +102,9 @@ const i18n = {
     ste_sheet1_name: 'Fighter ver. (default)',
 
     tsu_sheet1_desc: '',
-    tsu_sheet2_desc: '',
-    tsu_sheet3_desc: '',
-    ste_sheet1_desc: '',
+    tsu_sheet2_desc: 'Despite a gentle appearance that seems unrelated to martial arts, they took on the challenge by chance!\nAlways coming back bruised and battered, but apparently has never lost by KO.',
+    tsu_sheet3_desc: 'Hates the cold, so fully armed with all kinds of fur(?).\nFursuit looks so warm that they apparently dress up all fluffy on purpose in winter.',
+    ste_sheet1_desc: 'Self-proclaimed rival of Tsukisa(?)\nLoves martial arts so much they dress like this every day — which makes everyone around them wary of what trouble might come next.',
 
     // Tags
     tsu_sheet_tag_11: 'sailer',
@@ -167,9 +167,9 @@ const i18n = {
     ste_sheet1_name: '格闘技 ver. (デフォルト)',
 
     tsu_sheet1_desc: '',
-    tsu_sheet2_desc: '',
-    tsu_sheet3_desc: '',
-    ste_sheet1_desc: '',
+    tsu_sheet2_desc: 'おとなしそうな見た目から格闘技とは無縁に見えるが、ひょんなことから格闘技に挑戦！\n毎回傷だらけになって帰ってくるが、KO負けをしたことは一度もないらしい。',
+    tsu_sheet3_desc: '寒いのが嫌いで、あらゆる毛(?)で武装している。\nケモノ着ぐるみが暖かそうに見えて、冬はわざわざもふもふに着飾って出かけるとか…',
+    ste_sheet1_desc: '自称・ツキサくんのライバル(？)\n格闘技が大好きで普段からこんな格好をしているせいで、周りからは何か事件を起こすんじゃないかと警戒されているらしい。',
 
     // Tags
     tsu_sheet_tag_11: 'セーラー',
