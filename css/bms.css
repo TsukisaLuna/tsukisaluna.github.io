@@ -40,7 +40,6 @@
     font-size: 12px;
     letter-spacing: 0.04em;
     white-space: nowrap;
-    text-align: left;
 }
 
 .bms-table thead th.center { text-align: center; }
@@ -104,7 +103,12 @@
 }
 
 /* Link buttons */
-.bms-links { display: flex; gap: 5px; align-items: center; }
+.bms-links {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center; /* 추가 */
+  }
 
 .bms-btn {
     display: inline-block;
@@ -117,6 +121,10 @@
     transition: all 0.18s;
     white-space: nowrap;
 }
+
+.bms-btn.invisible {
+    visibility: hidden; /* 공간은 차지하되 안 보임 */
+  }
 
 .bms-btn.play {
     background: var(--main-pale);

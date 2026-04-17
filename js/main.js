@@ -151,11 +151,11 @@ function renderBMS(data) {
 
     const mirBtn = sha256
       ? `<a class="bms-btn ir" href="https://www.gaftalk.com/minir/#/viewer/song/${sha256}/0" target="_blank">MinIR</a>`
-      : '';
+      : `<span class="bms-btn ir invisible">MinIR</span>`;
 
     const lr2Btn = md5
       ? `<a class="bms-btn ir" href="http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=${md5}" target="_blank">LR2IR</a>`
-      : '';
+      : `<span class="bms-btn ir invisible">LR2IR</span>`;
 
     const dlBtn = dl_title
       ? `<a class="bms-btn dl" href="https://tsukisa.info/sabun/${dl_title}.zip" target="_blank">DL</a>`
