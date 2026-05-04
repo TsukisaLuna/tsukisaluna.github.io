@@ -211,7 +211,9 @@ function applyLang() {
   const t = i18n[currentLang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
-    if (t[key] !== undefined) el.innerHTML = t[key];
+    if (t[key] !== undefined) {
+      el.innerHTML = t[key].replace(/\n/g, '<br>');
+    }
   });
   document.documentElement.lang = currentLang;
   document.documentElement.classList.remove('lang-en', 'lang-ko', 'lang-ja');

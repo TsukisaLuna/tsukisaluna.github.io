@@ -78,7 +78,7 @@ function openLb(imgs, ver, name, desc) {
 
   if (name || desc) {
     descTitle.textContent = (ver ? ver + ' · ' : '') + (name ?? '');
-    descText.innerHTML = (desc ?? '').replace(/[\r\n]+/g, '<br>');
+    descText.innerHTML = (desc ?? '').replace(/\n/g, '<br>');
     descBox.style.display = 'block';
   } else {
     descBox.style.display = 'none';
