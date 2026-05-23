@@ -17,10 +17,10 @@ const i18n = {
     tag_game4:     '명일방주:엔드필드',
 
     tsu_name:      '츠키사 루나　(츠키사군)',
-    tsu_desc:      '12살 / 1월 20일 / \n언제나 밝고 긍정적인 호기심 많은 늑대 소년',
+    tsu_desc:      '12살 / 1월 20일 / 남자아이 \n언제나 밝고 긍정적인 호기심 많은 늑대 소년',
 
     ste_name:      '스텔라 마리스　(스텔라군)',
-    ste_desc:      '11살 / 4월 22일 / \n장난을 매우 좋아하는 사고뭉치 롭이어토끼 소년',
+    ste_desc:      '11살 / 4월 22일 / 남자아이 \n장난을 매우 좋아하는 사고뭉치 롭이어토끼 소년',
 
     bms_loading:   '로딩 중...',
     bms_error:     '데이터를 불러올 수 없어요 🥲',
@@ -51,9 +51,11 @@ const i18n = {
     tsu_sheet_tag_11: '세라복',
     tsu_sheet_tag_12: '장갑',
     tsu_sheet_tag_13: '맨발',
+
     tsu_sheet_tag_21: '후드티',
-    tsu_sheet_tag_22: '복싱장갑',
+    tsu_sheet_tag_22: '복싱글러브',
     tsu_sheet_tag_23: '킥복싱',
+
     tsu_sheet_tag_31: '망토',
     tsu_sheet_tag_32: '스웨터',
     tsu_sheet_tag_33: '동물장갑',
@@ -62,7 +64,7 @@ const i18n = {
     ste_sheet_tag_11: '후드티',
     ste_sheet_tag_12: '체인',
     ste_sheet_tag_13: '반장갑',
-    ste_sheet_tag_14: '복싱장갑',
+    ste_sheet_tag_14: '복싱글러브',
     ste_sheet_tag_15: '킥복싱',
   },
 
@@ -82,10 +84,10 @@ const i18n = {
     tag_game4:     'Arknights:EndField',
 
     tsu_name:      'Tsukisa Luna',
-    tsu_desc:      'Always bright and positive, a curious wolf boy',
+    tsu_desc:      '12 / January 20th / Boy \nAlways bright and positive, a curious wolf boy',
 
     ste_name:      'Stella Maris',
-    ste_desc:      'A mischievous troublemaker lop-ear rabbit boy who loves fighting',
+    ste_desc:      '11 / April 22th / Boy \nA mischievous troublemaker lop-ear rabbit boy who loves fighting',
 
     // Character Sheets
     tsu_sheet1: 'Tsukisa',
@@ -148,10 +150,10 @@ const i18n = {
     tag_game4:     '明日方舟：エンドフィールド',
 
     tsu_name:      '月作　ルーナ （月作くん)',
-    tsu_desc:      'いつも明るくポジティブな好奇心旺盛な狼少年',
+    tsu_desc:      '12歳 / 1月20日 / 男の子 \nいつも明るくポジティブな好奇心旺盛な狼少年',
 
     ste_name:      'ステラ　マーリス （ステラくん)',
-    ste_desc:      'いたずら好きなトラブルメーカーのロップイヤーうさぎ少年',
+    ste_desc:      '11歳 / 4月22日 / 男の子 \nいたずら好きなトラブルメーカーのロップイヤーうさぎ少年',
 
     // Character Sheets
     tsu_sheet1: '月作くん',
