@@ -202,9 +202,9 @@ let currentLang = localStorage.getItem('lang') || detectLang();
 
 function detectLang() {
   const l = navigator.language;
-  if (l.startsWith('en')) return 'en';
   if (l.startsWith('ja')) return 'ja';
-  return 'ko';
+  if (l.startsWith('ko')) return 'ko';
+  return 'en';
 }
 
 function applyLang() {
