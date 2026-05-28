@@ -169,7 +169,7 @@ function renderBMS(data) {
         <td class="bms-num center col-total">${total}</td>
         <td class="bms-num center col-notes">${notes}</td>
         <td class="bms-tpn center col-tpn">${tpn}</td>
-        <td class="center col-ir"><div class="bms-links">${mirBtn}${lr2Btn}</div></td>
+        <td class="center col-ir"><div class="bms-links">${mirBtn}</div></td>
         <td class="center col-dl">${dlBtn}</td>
       </tr>`;
   }).join('');
