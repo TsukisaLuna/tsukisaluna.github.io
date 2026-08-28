@@ -157,6 +157,10 @@ function renderBMS(data) {
       ? `<a class="bms-btn ir" href="http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=${md5}" target="_blank">LR2IR</a>`
       : `<span class="bms-btn ir invisible">LR2IR</span>`;
 
+    const steir2Btn = md5
+      ? `<a class="bms-btn ir" href="https://ir.stellabms.xyz/charts/${md5}" target="_blank">Ste2IR</a>`
+      : `<span class="bms-btn ir invisible">SteIR</span>`;
+
     const dlBtn = dl_title
       ? `<a class="bms-btn dl" href="https://tsukisa.info/sabun/${dl_title}.zip" target="_blank">DL</a>`
       : `<span class="bms-btn disabled">DL</span>`;
@@ -169,7 +173,7 @@ function renderBMS(data) {
         <td class="bms-num center col-total">${total}</td>
         <td class="bms-num center col-notes">${notes}</td>
         <td class="bms-tpn center col-tpn">${tpn}</td>
-        <td class="center col-ir"><div class="bms-links">${mirBtn}</div></td>
+        <td class="center col-ir"><div class="bms-links">${steir2Btn}${mirBtn}</div></td>
         <td class="center col-dl">${dlBtn}</td>
       </tr>`;
   }).join('');

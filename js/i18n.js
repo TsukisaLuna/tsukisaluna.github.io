@@ -14,7 +14,6 @@ const i18n = {
     tag_game1:     '리듬게임',
     tag_game2:     '메이플스토리 (KR)',
     tag_game3:     '트릭컬:리바이브 (KR/JP)',
-    tag_game4:     '명일방주:엔드필드',
 
     tsu_name:      '츠키사 루나　(츠키사군)',
     tsu_desc:      '12살 / 1월 20일 / 남자아이 \n언제나 밝고 긍정적인 호기심 많은 늑대 소년',
@@ -81,7 +80,6 @@ const i18n = {
     tag_game1:     'Rhythm Game',
     tag_game2:     'MapleStory (KR)',
     tag_game3:     'Trickcal:Chibi GO (KR/JP)',
-    tag_game4:     'Arknights:EndField',
 
     tsu_name:      'Tsukisa Luna',
     tsu_desc:      '12 / January 20th / Boy \nAlways bright and positive, a curious wolf boy',
@@ -147,7 +145,6 @@ const i18n = {
     tag_game1:     '音ゲー',
     tag_game2:     'メイプルストーリー (KR)',
     tag_game3:     'トリッカル：もちほっぺ (KR/JP)',
-    tag_game4:     '明日方舟：エンドフィールド',
 
     tsu_name:      '月作　ルーナ （月作くん)',
     tsu_desc:      '12歳 / 1月20日 / 男の子 \nいつも明るくポジティブな好奇心旺盛な狼少年',
